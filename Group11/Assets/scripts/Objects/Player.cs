@@ -88,29 +88,10 @@ namespace Objects
         // Tries to move the player in a direction by casting in that direction by the amount
         // moved plus an offset. If no collisions are found, it moves the players
         // Returns true or false depending on if a move was executed
-        public bool MovePlayer(Vector2 direction)
+        public void MovePlayer(Vector2 direction)
         {
-            // Check for potential collisions
-            int count = DetectCollision(direction); // The amount to cast equal to the movement plus an offset
-
-            if (count == 0)
-            {
-                Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
-
-                // No collisions
-                _body.MovePosition(_body.position + moveVector);
-                return true;
-            }
-            else
-            {
-                // Print collisions
-                // foreach (RaycastHit2D hit in _castCollisions)
-                // {
-                //     print(hit.ToString());
-                // }
-
-                return false;
-            }
+            Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
+            _body.MovePosition(_body.position + moveVector);
         }
 
         private int DetectCollision(Vector2 direction)
