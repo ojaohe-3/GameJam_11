@@ -76,13 +76,13 @@ public class GameHandler : MonoBehaviour
         queue.Enqueue(v);
     }
 
-    public void HandleMessage(string message)
+    public void HandleMessage(string message, GameClient source)
     {
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
         switch (dict.GetValueOrDefault("type", ""))
         {
             case "playerInfo":
-                RegisterPlayer(dict);
+                RegisterPlayer(dict, source);
                 break;
             case "move":
                 Debug.Log("Movement message: " + message);
@@ -94,7 +94,7 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    private void RegisterPlayer(Dictionary<string,string>? message)
+    private void RegisterPlayer(Dictionary<string, string> message, GameClient source)
     {
         var name = message.GetValueOrDefault("name", "");
         if (!name.Equals(PlayerName) && !_players.ContainsKey(name))
@@ -103,6 +103,13 @@ public class GameHandler : MonoBehaviour
             var o = Instantiate(character, DefaultSpawnPoint, Quaternion.identity);
             var c = o.GetComponent<Character>();
             c.Name = name;
+            foreach (var p in _players.Values)
+            {
+                Dictionary<string, string> notification = new();
+                message.Add("type", "playerInfo");
+                message.Add("name", p.name);
+                source.Send(JsonConvert.SerializeObject(notification));
+            }
             _players.Add(name, c);
         }
     }
