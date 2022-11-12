@@ -41,7 +41,7 @@ public class GameClient
         if (_writer != null)
         {
             await _writer.WriteLineAsync(message);
-            Debug.Log("Message sent to server");
+            Debug.Log("Client sent message to server: " + message);
         }
     }
 
@@ -50,63 +50,14 @@ public class GameClient
         await Connect();
         while (true)
         {
-            var response = await _reader.ReadLineAsync();
-            if (response != null)
+            var message = await _reader.ReadLineAsync();
+            if (message != null)
             {
-                Debug.Log("Message from server added to queue: " + response);
-                NetworkManager.Queue.Enqueue(response);
+                Debug.Log("Client got message from server: " + message);
+                GameHandler.HandleMessage(message);
             }
             else
                 break;
-        }
-    }
-}
-
-public class ClientHandler
-{
-    private readonly TcpClient _conn;
-    private readonly GameServer _server;
-    private readonly StreamReader _reader;
-    private readonly StreamWriter _writer;
-
-
-    public ClientHandler(TcpClient conn, GameServer server)
-    {
-        _conn = conn;
-        _server = server;
-        var networkStream = conn.GetStream();
-        _reader = new StreamReader(networkStream);
-        _writer = new StreamWriter(networkStream);
-    }
-
-    public async void Send(string message)
-    {
-        Debug.Log("Sending to " + _conn.Client.RemoteEndPoint + ": " + message);
-        await _writer.WriteLineAsync(message);
-    }
-
-    public async Task Run()
-    {
-        try {
-            _writer.AutoFlush = true;
-            while (true) {
-                string request = await _reader.ReadLineAsync();
-                if (request != null) {
-                    Debug.Log("Received message from " + _conn.Client.RemoteEndPoint + ": " + request);
-                    _server.Process(request);
-                }
-                else
-                {
-                    _server.Disconnect(this);
-                    break; // Client closed connection
-                }
-            }
-            _conn.Close();
-        }
-        catch (Exception ex) {
-            Debug.Log(ex.Message);
-            if (_conn.Connected)
-                _conn.Close();
         }
     }
 }

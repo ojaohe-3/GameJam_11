@@ -40,10 +40,12 @@ namespace Objects
 
         void FixedUpdate()
         {
-            while (NetworkManager.Queue.Count > 0)
+            var queue = GameHandler.MovementQueues.GetValueOrDefault("player", null);
+            while (queue is { Count: > 0 })
             {
-                Vector2 move = parseMovement(NetworkManager.Queue.Dequeue());
-                Debug.Log("parsed movement " + move);
+                Vector2 move;
+                if (!queue.TryDequeue(out move))
+                    continue;
                 // Try to move player in input direction, followed by left right and up down input if failed
                 var success = MovePlayer(move);
                 if(!success)
@@ -66,14 +68,6 @@ namespace Objects
             {
                 _animator.SetBool("isMoving", false);
             }
-        }
-
-        private static Vector2 parseMovement(string s)
-        {
-            var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(s);
-            var x = float.Parse(dict.GetValueOrDefault("x", "0"));
-            var y = float.Parse(dict.GetValueOrDefault("y", "0"));
-            return new Vector2(x, y);
         }
 
         // Tries to move the player in a direction by casting in that direction by the amount

@@ -14,7 +14,6 @@ public class NetworkManager
     private const int Port = 4242;
     private static GameServer _server;
     private static GameClient _client;
-    public static readonly Queue<string> Queue = new();
 
     public static void Start(string serverHost)
     {
@@ -49,6 +48,7 @@ public class NetworkManager
     {
         Dictionary<string, string> message = new();
         message.Add("type", "move");
+        message.Add("target", "player");
         message.Add("x", moveInput.x.ToString());
         message.Add("y", moveInput.y.ToString());
         _client?.Send(JsonConvert.SerializeObject(message));
