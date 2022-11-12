@@ -106,8 +106,8 @@ public class GameHandler : MonoBehaviour
             foreach (var p in _players.Values)
             {
                 Dictionary<string, string> notification = new();
-                message.Add("type", "playerInfo");
-                message.Add("name", p.name);
+                notification.Add("type", "playerInfo");
+                notification.Add("name", p.name);
                 source.Send(JsonConvert.SerializeObject(notification));
             }
             _players.Add(name, c);
