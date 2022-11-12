@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Models;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -7,20 +8,12 @@ namespace Objects
 {
     public class Character : MonoBehaviour
     {
-        [SerializeField] private float _speed = 200.0f;
+        //[SerializeField] private float _speed = 200.0f;
+        [SerializeField] protected float _speed = 10.0f;
         private Rigidbody2D _body;
-        [SerializeField]
-        private Vector2 _target;
+        // [SerializeField] private Vector2 _target;
         //private Animator _animator;
-        [SerializeField]
-        private PlayerCharacter _ch;
-
-        public string Name;
-
-        public Character(string name)
-        {
-            Name = name;
-        }
+        [SerializeField] public string Name;
 
         private void Start()
         {
@@ -29,31 +22,24 @@ namespace Objects
             Assert.IsNotNull(_body);
             // Assert.IsNotNull(_animator);
             // _target = _body.position;
+            Debug.Log("hello from " + name);
         }
 
-        private void FixedUpdate()
+        protected void FixedUpdate()
         {
-
-            if (Vector2.Distance(_target, _body.position) > 0.1f)
+            var queue = GameHandler.MovementQueues.GetValueOrDefault(Name, null);
+            while (queue is { Count: > 0 })
             {
-
-                var direction = (_target - _body.position).normalized;
-                _body.velocity = direction * (_speed * Time.deltaTime);
-                //_animator.SetBool("isMoving",true);
-                // _body.MovePosition(direction * (_speed * Time.deltaTime));
-            }
-            else
-            {
-                _body.velocity = Vector2.zero;
-                //_animator.SetBool("isMoving", false);
+                Vector2 move;
+                if (queue.TryDequeue(out move))
+                    Move(move);
             }
         }
 
-        public void OnSetTarget(Vector2 target)
+        public void Move(Vector2 direction)
         {
-
-            this._target = target;
+            Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
+            _body.MovePosition(_body.position + moveVector);
         }
-
     }
 }

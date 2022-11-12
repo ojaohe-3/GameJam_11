@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
 {
     private static GameHandler _instance;
     private static readonly object padlock = new();
-    [SerializeField] private GameObject character;
+    public GameObject character;
     public static GameHandler Instance
     {
         get
@@ -27,14 +27,12 @@ public class GameHandler : MonoBehaviour
     }
 
     public string playerName = "player";
-    [SerializeField] private List<Character> players = new();
+    private List<Character> players = new();
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
     public void Start()
     {
-
-
         NetworkManager.Start(null);
         NetworkManager.SendPlayerInfo(playerName);
     }
@@ -59,8 +57,6 @@ public class GameHandler : MonoBehaviour
         queue.Enqueue(v);
     }
 
-
-
     public void HandleMessage(string message)
     {
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
@@ -84,12 +80,14 @@ public class GameHandler : MonoBehaviour
         var name = message.GetValueOrDefault("name", "");
         if (!name.Equals(playerName))
         {
-            Instantiate(character, Vector2.zero, Quaternion.identity);
-
-            var c = character.GetComponent<Character>();
-            c.Name = name;
-            c?.OnSetTarget(new Vector2(10, 10));
-            players.Add(c);
+            Debug.Log("create character " + name);
+            //Instantiate(character, Vector2.zero, Quaternion.identity);
+            // Debug.Log("peekaboo");
+            //var c = character.GetComponent<Character>();
+            //c.Name = name;
+            // Debug.Log("peekaboo");
+            //Debug.Log(c);
+            //players.Add(c);
         }
     }
 
