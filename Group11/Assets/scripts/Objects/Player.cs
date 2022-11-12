@@ -49,7 +49,6 @@ namespace Objects
 
         void FixedUpdate()
         {
-
             var queue = GameHandler.MovementQueues.GetValueOrDefault("player", null);
             while (queue is { Count: > 0 })
             {
@@ -57,30 +56,27 @@ namespace Objects
                 if (!queue.TryDequeue(out move))
                     continue;
                 // Try to move player in input direction, followed by left right and up down input if failed
-                var success = MovePlayer(_moveInput);
+                var success = MovePlayer(move);
                 if (!success)
                 {
                     // Try Left / Right
-                    success = MovePlayer(new Vector2(_moveInput.x, 0));
-
+                    success = MovePlayer(new Vector2(move.x, 0));
                     if (!success)
                     {
-                        success = MovePlayer(new Vector2(0, _moveInput.y));
+                        success = MovePlayer(new Vector2(0, move.y));
                     }
                 }
 
                 _animator.SetBool("isMoving", success);
+            }
 
-                if (_moveInput != Vector2.zero)
-                {
-                    // NetworkManager.SendMove(_moveInput);
-
-                }
-                else
-                {
-
-                    _animator.SetBool("isMoving", false);
-                }
+            if (_moveInput != Vector2.zero)
+            {
+                GameHandler.NotifyMove(_moveInput);
+            }
+            else
+            {
+                _animator.SetBool("isMoving", false);
             }
         }
 
@@ -120,8 +116,6 @@ namespace Objects
         public void OnMove(InputValue inputValue)
         {
             _moveInput = inputValue.Get<Vector2>();
-            if (_moveInput != Vector2.zero)
-                GameHandler.NotifyMove(_moveInput);
         }
 
         public void OnFire()
