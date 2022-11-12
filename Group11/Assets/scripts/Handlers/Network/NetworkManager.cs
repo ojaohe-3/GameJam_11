@@ -54,16 +54,8 @@ public class NetworkManager
         Send(message);
     }
 
-    private static void Send(Dictionary<string, string> message)
+    public static void Send(Dictionary<string, string> message)
     {
         _client.Send(JsonConvert.SerializeObject(message));
-    }
-
-    public static void SendPlayerInfo(string name)
-    {
-        Dictionary<string, string> message = new();
-        message.Add("type", "playerInfo");
-        message.Add("name", name);
-        Send(message);
     }
 }

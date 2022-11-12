@@ -41,7 +41,7 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player name: " + PlayerName);
         Debug.Log("Host name: " + host);
         NetworkManager.Start(host);
-        NetworkManager.SendPlayerInfo(PlayerName);
+        InvokeRepeating("SendPlayerInfo", 0f, 1f);
     }
 
     private static string GetCommandArgs(string name, string defaultValue)
@@ -82,7 +82,7 @@ public class GameHandler : MonoBehaviour
         switch (dict.GetValueOrDefault("type", ""))
         {
             case "playerInfo":
-                RegisterPlayer(dict.GetValueOrDefault("name", null), source);
+                RegisterCharacter(dict.GetValueOrDefault("name", null), source);
                 break;
             case "move":
                 Debug.Log("Movement message: " + message);
@@ -94,7 +94,7 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    private void RegisterPlayer(string name, GameClient source)
+    private void RegisterCharacter(string name, GameClient source)
     {
         if (name != null && !name.Equals(PlayerName) && !_players.ContainsKey(name))
         {
@@ -116,5 +116,13 @@ public class GameHandler : MonoBehaviour
     public void NotifyMove(Vector2 moveInput)
     {
         NetworkManager.SendMove(PlayerName, moveInput);
+    }
+
+    private void SendPlayerInfo()
+    {
+        Dictionary<string, string> message = new();
+        message.Add("type", "playerInfo");
+        message.Add("name", PlayerName);
+        NetworkManager.Send(message);
     }
 }
