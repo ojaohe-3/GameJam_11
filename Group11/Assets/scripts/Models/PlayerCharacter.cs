@@ -1,13 +1,14 @@
 using System;
+using UnityEngine.Serialization;
 
 namespace Models
 {    
     [Serializable]
     public struct PlayerCharacter
     {
-        public bool Impostor{get; set;}
-        public string Name { get; set; }
-        public string Uid { get; }
-        
+        public bool impostor;
+        public string name;
+        public string uid;
+
     }
 }

@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class TaskNode 
+namespace Models
 {
-    public bool Status {get;set;}
-    public bool Active {get;set;} 
-    public string TaskType{get;set;} //TODO make enum.
-
-    public TaskNode(bool status, bool active, string taskType)
+    [Serializable]
+    public struct TaskNode
     {
-        Status = status;
-        Active = active;
-        TaskType = taskType;
+        public bool status;
+        public bool active;
+        public string taskType; //TODO make enum.
+
     }
 }

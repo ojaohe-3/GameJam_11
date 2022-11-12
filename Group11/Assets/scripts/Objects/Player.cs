@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Models;
+using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -13,13 +14,13 @@ namespace Objects
         private Rigidbody2D _body;
         private Animator _animator;
 
-        [SerializeField] private float _interactionRadius = 1.0f;
+        [SerializeField] private float _interactionDistance = 1.0f;
 
         [SerializeField] private float _speed = 10.0f;
         [SerializeField] private float collisionOffset = 0.05f;
         [SerializeField] private ContactFilter2D movementFilter;
+        [SerializeField] private PlayerCharacter _ch;
 
-        private bool _interacted = false;
         private Vector2 _moveInput;
         private List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
 
@@ -33,33 +34,43 @@ namespace Objects
 
         void OnInteract()
         {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, _moveInput);
+            if (hit.collider != null)
+            {
+                float distance = Vector2.Distance(hit.point, _body.position);
+                if (distance < _interactionDistance)
+                {
+                    
+                }
+            }
             Debug.Log("interacted !");
         }
 
 
         void FixedUpdate()
         {
-            while (NetworkManager.Queue.Count > 0)
-            {
-                Vector2 move = parseMovement(NetworkManager.Queue.Dequeue());
-                Debug.Log("parsed movement " + move);
+            // while (NetworkManager.Queue.Count > 0)
+            // {
+                // Vector2 move = parseMovement(NetworkManager.Queue.Dequeue());
+                // Debug.Log("parsed movement " + move);
                 // Try to move player in input direction, followed by left right and up down input if failed
-                var success = MovePlayer(move);
+                var success = MovePlayer(_moveInput);
                 if(!success)
                 {
                     // Try Left / Right
-                    success = MovePlayer(new Vector2(move.x, 0));
+                    success = MovePlayer(new Vector2(_moveInput.x, 0));
 
                     if(!success)
                     {
-                        success = MovePlayer(new Vector2(0, move.y));
+                        success = MovePlayer(new Vector2(0, _moveInput.y));
                     }
                 }
                 _animator.SetBool("isMoving", success);
-            }
+            // }
             if (_moveInput != Vector2.zero)
             {
-                NetworkManager.SendMove(_moveInput);
+                // NetworkManager.SendMove(_moveInput);
+                
             }
             else
             {

@@ -1,4 +1,5 @@
 using System;
+using Models;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -6,25 +7,37 @@ namespace Objects
 {
     public class Character : MonoBehaviour
     {
-        [SerializeField] private float _speed = 10.0f;
+        [SerializeField] private float _speed = 200.0f;
         private Rigidbody2D _body;
+        [SerializeField]
         private Vector2 _target;
-        private Action<Vector2> invoke_target;
+        private Animator _animator;
+        [SerializeField]
+        private PlayerCharacter _ch;
         private void Start()
         {
             _body = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
-            _target = _body.position;
-            invoke_target += OnSetTarget;
+            Assert.IsNotNull(_animator);
+            // _target = _body.position;
         }
 
         private void FixedUpdate()
         {
-            invoke_target?.Invoke(Vector2.right);
 
             if (Vector2.Distance(_target, _body.position) > 0.1f)
             {
-                _body.MovePosition(_target * (_speed * Time.deltaTime));
+                
+                var direction = (_target - _body.position).normalized;
+                _body.velocity = direction * (_speed * Time.deltaTime);
+                _animator.SetBool("isMoving",true);
+                // _body.MovePosition(direction * (_speed * Time.deltaTime));
+            }
+            else
+            {
+                _body.velocity = Vector2.zero;
+                _animator.SetBool("isMoving", false);
             }
         }
 
