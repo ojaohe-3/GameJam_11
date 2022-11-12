@@ -21,11 +21,13 @@ namespace Objects
         [SerializeField] private ContactFilter2D movementFilter;
         [SerializeField] private PlayerCharacter _ch;
 
+        private List<GameObject> _tasks;
         private Vector2 _moveInput;
         private List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
 
         void Start()
         {
+            _tasks = new List<GameObject>(GameObject.FindGameObjectsWithTag("TaskNode"));
             _body = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
@@ -34,16 +36,13 @@ namespace Objects
 
         void OnInteract()
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, _moveInput);
-            if (hit.collider != null)
+            foreach (var o in _tasks)
             {
-                float distance = Vector2.Distance(hit.point, _body.position);
-                if (distance < _interactionDistance)
+                if (Vector2.Distance(o.transform.position, transform.position) < _interactionDistance)
                 {
-                    
+                    Debug.Log("interacted with node");
                 }
             }
-            Debug.Log("interacted !");
         }
 
 
@@ -113,10 +112,10 @@ namespace Objects
             else
             {
                 // Print collisions
-                foreach (RaycastHit2D hit in _castCollisions)
-                {
-                    print(hit.ToString());
-                }
+                // foreach (RaycastHit2D hit in _castCollisions)
+                // {
+                //     print(hit.ToString());
+                // }
 
                 return false;
             }
