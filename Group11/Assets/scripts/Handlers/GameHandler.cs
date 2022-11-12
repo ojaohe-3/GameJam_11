@@ -9,6 +9,8 @@ public class GameHandler : MonoBehaviour
 {
     private static GameHandler _instance;
     private static readonly object padlock = new();
+
+    private static readonly Vector2 DefaultSpawnPoint = new(-2, 1);
     public GameObject character;
     public static GameHandler Instance
     {
@@ -97,7 +99,7 @@ public class GameHandler : MonoBehaviour
         if (!name.Equals(PlayerName) && !_players.ContainsKey(name))
         {
             Debug.Log("create character " + name);
-            var o = Instantiate(character, Vector2.zero, Quaternion.identity);
+            var o = Instantiate(character, DefaultSpawnPoint, Quaternion.identity);
             var c = o.GetComponent<Character>();
             c.Name = name;
             _players.Add(name, c);
