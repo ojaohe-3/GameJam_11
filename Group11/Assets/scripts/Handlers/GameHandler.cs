@@ -26,7 +26,7 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    public string playerName = "player";
+    public static readonly string PlayerName = GetCommandArgs("player", "player");
     private readonly Dictionary<string, Character> _players = new();
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
@@ -34,8 +34,24 @@ public class GameHandler : MonoBehaviour
     public void Start()
     {
         _instance = this;
-        NetworkManager.Start(null);
-        NetworkManager.SendPlayerInfo(playerName);
+        var host = GetCommandArgs("host", null);
+        Debug.Log("Player name: " + PlayerName);
+        Debug.Log("Host name: " + host);
+        NetworkManager.Start(host);
+        NetworkManager.SendPlayerInfo(PlayerName);
+    }
+
+    private static string GetCommandArgs(string name, string defaultValue)
+    {
+        var args = System.Environment.GetCommandLineArgs();
+        bool next = false;
+        foreach (string s in args)
+        {
+            if (next)
+                return s;
+            next = s.Equals("--" + name);
+        }
+        return defaultValue;
     }
 
     public static void EnqueueMovement(Dictionary<string, string> message)
@@ -78,7 +94,7 @@ public class GameHandler : MonoBehaviour
     private void RegisterPlayer(Dictionary<string,string>? message)
     {
         var name = message.GetValueOrDefault("name", "");
-        if (!name.Equals(playerName) && !_players.ContainsKey(name))
+        if (!name.Equals(PlayerName) && !_players.ContainsKey(name))
         {
             Debug.Log("create character " + name);
             var o = Instantiate(character, Vector2.zero, Quaternion.identity);
@@ -90,6 +106,6 @@ public class GameHandler : MonoBehaviour
 
     public void NotifyMove(Vector2 moveInput)
     {
-        NetworkManager.SendMove(playerName, moveInput);
+        NetworkManager.SendMove(PlayerName, moveInput);
     }
 }
