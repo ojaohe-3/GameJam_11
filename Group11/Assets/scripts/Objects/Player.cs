@@ -60,14 +60,8 @@ namespace Objects
                 }
                 _animator.SetBool("isMoving", success);
             }
-            if (_moveInput != Vector2.zero)
-            {
-                GameHandler.NotifyMove(_moveInput);
-            }
-            else
-            {
+            if (_moveInput == Vector2.zero)
                 _animator.SetBool("isMoving", false);
-            }
         }
 
         // Tries to move the player in a direction by casting in that direction by the amount
@@ -105,7 +99,9 @@ namespace Objects
 
         public void OnMove(InputValue inputValue)
         {
-            this._moveInput = inputValue.Get<Vector2>();
+            _moveInput = inputValue.Get<Vector2>();
+            if (_moveInput != Vector2.zero)
+                GameHandler.NotifyMove(_moveInput);
         }
 
         public void OnFire()
