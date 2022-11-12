@@ -13,7 +13,7 @@ namespace Objects
     public class Player : MonoBehaviour
     {
         private Rigidbody2D _body;
-        private Animator _animator;
+        // private Animator _animator;
 
         [SerializeField] private float _interactionDistance = 1.0f;
 
@@ -30,7 +30,7 @@ namespace Objects
         {
             _tasks = new List<GameObject>(GameObject.FindGameObjectsWithTag("TaskNode"));
             _body = GetComponent<Rigidbody2D>();
-            _animator = GetComponent<Animator>();
+            // _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
             GameHandler.Start();
         }
@@ -67,7 +67,7 @@ namespace Objects
                     }
                 }
 
-                _animator.SetBool("isMoving", success);
+                // _animator.SetBool("isMoving", success);
             }
 
             if (_moveInput != Vector2.zero)
@@ -76,7 +76,7 @@ namespace Objects
             }
             else
             {
-                _animator.SetBool("isMoving", false);
+                // _animator.SetBool("isMoving", false);
             }
         }
 
