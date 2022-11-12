@@ -61,4 +61,9 @@ public class GameHandler
                 break;
         }
     }
+
+    public static void NotifyMove(Vector2 moveInput)
+    {
+        NetworkManager.SendMove("player", moveInput);
+    }
 }

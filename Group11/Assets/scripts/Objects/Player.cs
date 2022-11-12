@@ -62,7 +62,7 @@ namespace Objects
             }
             if (_moveInput != Vector2.zero)
             {
-                NetworkManager.SendMove(_moveInput);
+                GameHandler.NotifyMove(_moveInput);
             }
             else
             {

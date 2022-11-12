@@ -44,11 +44,11 @@ public class NetworkManager
         return null;
     }
 
-    public static void SendMove(Vector2 moveInput)
+    public static void SendMove(string target, Vector2 moveInput)
     {
         Dictionary<string, string> message = new();
         message.Add("type", "move");
-        message.Add("target", "player");
+        message.Add("target", target);
         message.Add("x", moveInput.x.ToString());
         message.Add("y", moveInput.y.ToString());
         _client?.Send(JsonConvert.SerializeObject(message));
