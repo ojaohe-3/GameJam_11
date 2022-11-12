@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Models;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
@@ -27,6 +28,7 @@ namespace Objects
             _body = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
+            NetworkManager.Start(null);
         }
 
         void OnInteract()
@@ -37,28 +39,43 @@ namespace Objects
 
         void FixedUpdate()
         {
-            if (_moveInput != Vector2.zero)
+            while (NetworkManager.Queue.Count > 0)
             {
+                Vector2 move = parseMovement(NetworkManager.Queue.Dequeue());
+                Debug.Log("parsed movement " + move);
                 // Try to move player in input direction, followed by left right and up down input if failed
-                bool success = MovePlayer(_moveInput);
-
-                if (!success)
+                var success = MovePlayer(move);
+                if(!success)
                 {
                     // Try Left / Right
-                    success = MovePlayer(new Vector2(_moveInput.x, 0));
+                    success = MovePlayer(new Vector2(move.x, 0));
 
-                    if (!success)
+                    if(!success)
                     {
-                        success = MovePlayer(new Vector2(0, _moveInput.y));
+                        success = MovePlayer(new Vector2(0, move.y));
                     }
                 }
-
                 _animator.SetBool("isMoving", success);
+            }
+            if (_moveInput != Vector2.zero)
+            {
+                NetworkManager.SendMove(_moveInput);
             }
             else
             {
                 _animator.SetBool("isMoving", false);
             }
+        }
+
+        private static Vector2 parseMovement(string s)
+        {
+            s = s.Replace(" ", "").Replace("(", "").Replace(")", "");
+            var split = s.Trim().Split(",");
+            if (split.Length < 2)
+                throw new Exception("couldn't parse movement in " + s);
+            var x = float.Parse(split[0]);
+            var y = float.Parse(split[1]);
+            return new Vector2(x, y);
         }
 
         // Tries to move the player in a direction by casting in that direction by the amount
