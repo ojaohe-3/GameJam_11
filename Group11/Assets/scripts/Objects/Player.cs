@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Models;
 using Unity.VisualScripting;
+using Newtonsoft.Json;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -31,7 +32,7 @@ namespace Objects
             _body = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
-            NetworkManager.Start(null);
+            GameHandler.Start();
         }
 
         void OnInteract()
@@ -48,44 +49,39 @@ namespace Objects
 
         void FixedUpdate()
         {
-            // while (NetworkManager.Queue.Count > 0)
-            // {
-                // Vector2 move = parseMovement(NetworkManager.Queue.Dequeue());
-                // Debug.Log("parsed movement " + move);
+
+            var queue = GameHandler.MovementQueues.GetValueOrDefault("player", null);
+            while (queue is { Count: > 0 })
+            {
+                Vector2 move;
+                if (!queue.TryDequeue(out move))
+                    continue;
                 // Try to move player in input direction, followed by left right and up down input if failed
                 var success = MovePlayer(_moveInput);
-                if(!success)
+                if (!success)
                 {
                     // Try Left / Right
                     success = MovePlayer(new Vector2(_moveInput.x, 0));
 
-                    if(!success)
+                    if (!success)
                     {
                         success = MovePlayer(new Vector2(0, _moveInput.y));
                     }
                 }
-                _animator.SetBool("isMoving", success);
-            // }
-            if (_moveInput != Vector2.zero)
-            {
-                // NetworkManager.SendMove(_moveInput);
-                
-            }
-            else
-            {
-                _animator.SetBool("isMoving", false);
-            }
-        }
 
-        private static Vector2 parseMovement(string s)
-        {
-            s = s.Replace(" ", "").Replace("(", "").Replace(")", "");
-            var split = s.Trim().Split(",");
-            if (split.Length < 2)
-                throw new Exception("couldn't parse movement in " + s);
-            var x = float.Parse(split[0]);
-            var y = float.Parse(split[1]);
-            return new Vector2(x, y);
+                _animator.SetBool("isMoving", success);
+
+                if (_moveInput != Vector2.zero)
+                {
+                    // NetworkManager.SendMove(_moveInput);
+
+                }
+                else
+                {
+
+                    _animator.SetBool("isMoving", false);
+                }
+            }
         }
 
         // Tries to move the player in a direction by casting in that direction by the amount
@@ -123,7 +119,9 @@ namespace Objects
 
         public void OnMove(InputValue inputValue)
         {
-            this._moveInput = inputValue.Get<Vector2>();
+            _moveInput = inputValue.Get<Vector2>();
+            if (_moveInput != Vector2.zero)
+                GameHandler.NotifyMove(_moveInput);
         }
 
         public void OnFire()
