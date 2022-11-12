@@ -18,7 +18,8 @@ public class GameHandler : MonoBehaviour
             {
                 if (_instance == null)
                 {
-                    _instance = new ();
+                    var o = new GameObject();
+                    _instance = o.AddComponent<GameHandler>();
                 }
                 return _instance;
             }
