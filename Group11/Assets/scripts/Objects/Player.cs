@@ -9,14 +9,15 @@ namespace Objects
 {
     public class Player : MonoBehaviour
     {
-
         private Rigidbody2D _body;
+        private Animator _animator;
 
         [SerializeField] private float _interactionRadius = 1.0f;
 
         [SerializeField] private float _speed = 10.0f;
         [SerializeField] private float collisionOffset = 0.05f;
         [SerializeField] private ContactFilter2D movementFilter;
+
         private bool _interacted = false;
         private Vector2 _moveInput;
         private List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
@@ -24,6 +25,7 @@ namespace Objects
         void Start()
         {
             _body = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
         }
 
@@ -31,23 +33,34 @@ namespace Objects
         {
             Debug.Log("interacted !");
         }
-        
+
 
         void FixedUpdate()
         {
-            bool success = MovePlayer(_moveInput);
-        
-            if(!success)
+            if (_moveInput != Vector2.zero)
             {
-                // Try Left / Right
-                success = MovePlayer(new Vector2(_moveInput.x, 0));
- 
-                if(!success)
+                // Try to move player in input direction, followed by left right and up down input if failed
+                bool success = MovePlayer(_moveInput);
+
+                if (!success)
                 {
-                    success = MovePlayer(new Vector2(0, _moveInput.y));
+                    // Try Left / Right
+                    success = MovePlayer(new Vector2(_moveInput.x, 0));
+
+                    if (!success)
+                    {
+                        success = MovePlayer(new Vector2(0, _moveInput.y));
+                    }
                 }
+
+                _animator.SetBool("isMoving", success);
+            }
+            else
+            {
+                _animator.SetBool("isMoving", false);
             }
         }
+
         // Tries to move the player in a direction by casting in that direction by the amount
         // moved plus an offset. If no collisions are found, it moves the players
         // Returns true or false depending on if a move was executed
@@ -58,12 +71,13 @@ namespace Objects
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
                 movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
                 _castCollisions, // List of collisions to store the found collisions into after the Cast is finished
-                _speed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
- 
+                _speed * Time.fixedDeltaTime +
+                collisionOffset); // The amount to cast equal to the movement plus an offset
+
             if (count == 0)
             {
                 Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
- 
+
                 // No collisions
                 _body.MovePosition(_body.position + moveVector);
                 return true;
@@ -75,14 +89,16 @@ namespace Objects
                 {
                     print(hit.ToString());
                 }
- 
+
                 return false;
             }
         }
+
         public void OnMove(InputValue inputValue)
         {
             this._moveInput = inputValue.Get<Vector2>();
         }
+
         public void OnFire()
         {
             print("Shots fired");
