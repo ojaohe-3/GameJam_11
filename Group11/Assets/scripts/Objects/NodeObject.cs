@@ -6,19 +6,29 @@ namespace Objects
 {
     public class NodeObject : MonoBehaviour
     {
-        public Action<bool> _statusChange { get; set; }
+        public Action<bool> StatusChange { get; set; }
         
         [SerializeField] private TaskNode _node;
-        // Start is called before the first frame update
-        void Start()
+
+        public bool isCompleteable()
         {
-            
+            return _node.active && !_node.status;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void Complete()
         {
-        
+            if(_node.active != true) return;
+            
+            _node.status = true;
+            StatusChange?.Invoke(true);
+        }
+        public bool Sabotarge()
+        {
+            if(_node.active != true) return false;
+
+            _node.status = false;
+              StatusChange?.Invoke(false);
+              return true;
         }
     }
 }
