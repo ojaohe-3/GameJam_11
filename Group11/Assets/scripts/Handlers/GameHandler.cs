@@ -27,7 +27,7 @@ public class GameHandler : MonoBehaviour
     }
 
     public string playerName = "player";
-    private List<Character> players = new();
+    private readonly Dictionary<string, Character> _players = new();
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
@@ -79,13 +79,13 @@ public class GameHandler : MonoBehaviour
     private void RegisterPlayer(Dictionary<string,string>? message)
     {
         var name = message.GetValueOrDefault("name", "");
-        if (!name.Equals(playerName))
+        if (!name.Equals(playerName) && !_players.ContainsKey(name))
         {
             Debug.Log("create character " + name);
             Instantiate(character, Vector2.zero, Quaternion.identity);
             var c = character.GetComponent<Character>();
             c.Name = name;
-            players.Add(c);
+            _players.Add(name, c);
         }
     }
 
