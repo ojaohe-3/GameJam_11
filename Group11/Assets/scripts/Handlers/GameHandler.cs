@@ -33,6 +33,7 @@ public class GameHandler : MonoBehaviour
 
     public void Start()
     {
+        _instance = this;
         NetworkManager.Start(null);
         NetworkManager.SendPlayerInfo(playerName);
     }
@@ -81,13 +82,10 @@ public class GameHandler : MonoBehaviour
         if (!name.Equals(playerName))
         {
             Debug.Log("create character " + name);
-            //Instantiate(character, Vector2.zero, Quaternion.identity);
-            // Debug.Log("peekaboo");
-            //var c = character.GetComponent<Character>();
-            //c.Name = name;
-            // Debug.Log("peekaboo");
-            //Debug.Log(c);
-            //players.Add(c);
+            Instantiate(character, Vector2.zero, Quaternion.identity);
+            var c = character.GetComponent<Character>();
+            c.Name = name;
+            players.Add(c);
         }
     }
 

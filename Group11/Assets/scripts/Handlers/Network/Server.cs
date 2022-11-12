@@ -50,6 +50,7 @@ public class GameServer
 
     public void Disconnect(ServerClientHandler serverClientHandler)
     {
+        Debug.Log("Disconnected client " + serverClientHandler.ClientHost());
         clients.Remove(serverClientHandler);
     }
 }
@@ -72,8 +73,13 @@ public class ServerClientHandler
 
     public async void Send(string message)
     {
-        Debug.Log("Serving sending message to " + _conn.Client.RemoteEndPoint + ": " + message);
+        Debug.Log("Server sending message to " + ClientHost() + ": " + message);
         await _writer.WriteLineAsync(message);
+    }
+
+    public EndPoint ClientHost()
+    {
+        return _conn.Client.RemoteEndPoint;
     }
 
     public async Task Run()
@@ -83,7 +89,7 @@ public class ServerClientHandler
             while (true) {
                 string request = await _reader.ReadLineAsync();
                 if (request != null) {
-                    Debug.Log("Server received message from " + _conn.Client.RemoteEndPoint + ": " + request);
+                    Debug.Log("Server received message from " + ClientHost() + ": " + request);
                     _server.Process(request);
                 }
                 else
@@ -98,6 +104,7 @@ public class ServerClientHandler
             Debug.Log(ex.Message);
             if (_conn.Connected)
                 _conn.Close();
+            _server.Disconnect(this);
         }
     }
 }
