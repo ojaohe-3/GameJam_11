@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Models;
+using Newtonsoft.Json;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -69,12 +70,9 @@ namespace Objects
 
         private static Vector2 parseMovement(string s)
         {
-            s = s.Replace(" ", "").Replace("(", "").Replace(")", "");
-            var split = s.Trim().Split(",");
-            if (split.Length < 2)
-                throw new Exception("couldn't parse movement in " + s);
-            var x = float.Parse(split[0]);
-            var y = float.Parse(split[1]);
+            var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(s);
+            var x = float.Parse(dict.GetValueOrDefault("x", "0"));
+            var y = float.Parse(dict.GetValueOrDefault("y", "0"));
             return new Vector2(x, y);
         }
 

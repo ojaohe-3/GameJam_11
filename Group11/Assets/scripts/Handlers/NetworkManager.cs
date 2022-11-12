@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -46,10 +47,11 @@ public class NetworkManager
 
     public static void SendMove(Vector2 moveInput)
     {
-        if (_client != null)
-        {
-            _client.Send(moveInput.ToString());
-        }
+        Dictionary<string, string> message = new();
+        message.Add("type", "move");
+        message.Add("x", moveInput.x.ToString());
+        message.Add("y", moveInput.y.ToString());
+        _client?.Send(JsonConvert.SerializeObject(message));
     }
 }
 
