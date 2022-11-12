@@ -106,9 +106,59 @@ public class GameClient
     }
 }
 
+public class ClientHandler
+{
+    private readonly TcpClient _conn;
+    private readonly GameServer _server;
+    private readonly StreamReader _reader;
+    private readonly StreamWriter _writer;
+
+
+    public ClientHandler(TcpClient conn, GameServer server)
+    {
+        _conn = conn;
+        _server = server;
+        var networkStream = conn.GetStream();
+        _reader = new StreamReader(networkStream);
+        _writer = new StreamWriter(networkStream);
+    }
+
+    public async void Send(string message)
+    {
+        Debug.Log("Sending to " + _conn.Client.RemoteEndPoint + ": " + message);
+        await _writer.WriteLineAsync(message);
+    }
+
+    public async Task Run()
+    {
+        try {
+            _writer.AutoFlush = true;
+            while (true) {
+                string request = await _reader.ReadLineAsync();
+                if (request != null) {
+                    Debug.Log("Received message from " + _conn.Client.RemoteEndPoint + ": " + request);
+                    _server.Process(request);
+                }
+                else
+                {
+                    _server.Disconnect(this);
+                    break; // Client closed connection
+                }
+            }
+            _conn.Close();
+        }
+        catch (Exception ex) {
+            Debug.Log(ex.Message);
+            if (_conn.Connected)
+                _conn.Close();
+        }
+    }
+}
+
 public class GameServer
 {
     private readonly IPAddress _ipAddress;
+    private readonly List<ClientHandler> clients = new();
     private readonly int _port;
 
     public GameServer(string host, int port)
@@ -121,14 +171,16 @@ public class GameServer
 
     public async Task Run()
     {
-        TcpListener listener = new TcpListener(this._ipAddress, this._port);
+        TcpListener listener = new TcpListener(_ipAddress, _port);
         listener.Start();
-        Debug.Log("Game server is now running on port " + this._port);
+        Debug.Log("Game server is now running on port " + _port);
         while (true) {
             try {
                 TcpClient tcpClient = await listener.AcceptTcpClientAsync();
-                Task t = Process(tcpClient);
-                await t;
+                Debug.Log("Received connection request from " + tcpClient.Client.RemoteEndPoint);
+                var client = new ClientHandler(tcpClient, this);
+                clients.Add(client);
+                client.Run();
             }
             catch (Exception ex) {
                 Console.WriteLine(ex.Message);
@@ -136,38 +188,16 @@ public class GameServer
         }
     }
 
-    private async Task Process(TcpClient tcpClient)
+    public void Process(string request)
     {
-        string clientEndPoint =
-            tcpClient.Client.RemoteEndPoint.ToString();
-        Debug.Log("Received connection request from " + clientEndPoint);
-        try {
-            NetworkStream networkStream = tcpClient.GetStream();
-            StreamReader reader = new StreamReader(networkStream);
-            StreamWriter writer = new StreamWriter(networkStream);
-            writer.AutoFlush = true;
-            while (true) {
-                string request = await reader.ReadLineAsync();
-                if (request != null) {
-                    Debug.Log("Received message: " + request);
-                    string response = Response(request);
-                    Debug.Log("Response is: " + response);
-                    await writer.WriteLineAsync(response);
-                }
-                else
-                    break; // Client closed connection
-            }
-            tcpClient.Close();
-        }
-        catch (Exception ex) {
-            Debug.Log(ex.Message);
-            if (tcpClient.Connected)
-                tcpClient.Close();
+        foreach (var client in clients)
+        {
+            client.Send(request);
         }
     }
 
-    private static string Response(string request)
+    public void Disconnect(ClientHandler clientHandler)
     {
-        return request;
+        clients.Remove(clientHandler);
     }
 }
