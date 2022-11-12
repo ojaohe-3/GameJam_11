@@ -12,6 +12,10 @@ public class GameHandler : MonoBehaviour
     private static readonly object padlock = new();
 
     private static readonly Vector2 DefaultSpawnPoint = new(-2, 1);
+    [SerializeField] private float _roundtime = 120f;
+    private List<NodeObject> _tasks;
+    private ProgressBar _pg;
+    
     public GameObject character;
     public static GameHandler Instance
     {
@@ -34,8 +38,19 @@ public class GameHandler : MonoBehaviour
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
+    private void Update()
+    {
+        this._roundtime -= Time.deltaTime;
+        _pg._current = this._roundtime;
+
+    }
+
     public void Start()
     {
+        _pg = GetComponentsInChildren<ProgressBar>()[0];
+        _pg._max = this._roundtime;
+        
+        _tasks = new List<NodeObject>(GetComponentsInChildren<NodeObject>());
         _instance = this;
         var host = GetCommandArgs("host", null);
         Debug.Log("Player name: " + PlayerName);

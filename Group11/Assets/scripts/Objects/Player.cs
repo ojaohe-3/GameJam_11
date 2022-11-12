@@ -46,6 +46,8 @@ namespace Objects
 
         void OnSabotage()
         {
+            if(_ch.impostor != true) return;
+            
             foreach (var o in _tasks)
             {
                 if (Vector2.Distance(o.transform.position, transform.position) < _interactionDistance)
