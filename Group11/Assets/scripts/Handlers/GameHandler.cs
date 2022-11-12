@@ -14,8 +14,8 @@ public class GameHandler
 
     public static void Start()
     {
-        var player = GameObject.FindGameObjectWithTag("Player")?.GetComponent<Character>();
-        player.OnSetTarget();
+
+
         NetworkManager.Start(null);
     }
 
