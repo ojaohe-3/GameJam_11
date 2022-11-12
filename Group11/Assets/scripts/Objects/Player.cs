@@ -29,7 +29,7 @@ namespace Objects
             _body = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
-            NetworkManager.Start(null);
+            GameHandler.Start();
         }
 
         void OnInteract()

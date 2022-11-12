@@ -11,6 +11,11 @@ public class GameHandler
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
+    public static void Start()
+    {
+        NetworkManager.Start(null);
+    }
+
     public static void EnqueueMovement(Dictionary<string, string> message)
     {
         var target = message.GetValueOrDefault("target", "");
