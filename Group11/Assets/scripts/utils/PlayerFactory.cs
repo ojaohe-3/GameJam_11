@@ -1,8 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using Models;
+using Objects;
 using UnityEngine;
 
-public abstract class PlayerFactory
+namespace utils
 {
-    public abstract Player GeneratePlayer(GameObject obj0, PlayerCharacter ch);
+    public abstract class PlayerFactory
+    {
+        public abstract Player GeneratePlayer(GameObject obj0, PlayerCharacter ch);
+    }
 }

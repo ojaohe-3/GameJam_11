@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameHandler : MonoBehaviour
+public class GameHandler 
 {
-    // Start is called before the first frame update
-    void Start()
+    private static GameHandler instance = null;
+    private static readonly object padlock = new object();
+
+    public GameHandler()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public static GameHandler Instance
     {
-        
+        get
+        {
+            lock (padlock)
+            {
+                if (instance == null)
+                {
+                    instance = new GameHandler();
+                }
+                return instance;
+            }
+        }
     }
+
+    
 }
+

@@ -1,0 +1,3545 @@
+fileFormatVersion: 2
+guid: d62585bb55fc1ca248166aed4ebb7fe7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 92
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1194
+        width: 53
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d895ad4ee81e46bafa9d68e60e18e9
+      internalID: -474224117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1194
+        width: 53
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bef7a88be7d950ecb896bba43f95aa3
+      internalID: -544604062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1194
+        width: 58
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c904d8f44e883aabbf4ecbd6f8eaaa
+      internalID: 1275572519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_3
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1194
+        width: 61
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ab3832c988dc7c4b08d6c53b9b6628
+      internalID: -276400040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_4
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1194
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289ba0cb7ff4827168500772afb8c609
+      internalID: 1936875321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1194
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6f34974f9514c2f853abb891c4d7f7
+      internalID: -1064888942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_6
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1194
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30aee91c04d64f36aa88056a5f1080f
+      internalID: -337278156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_7
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 1194
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ea30c9e0fece59fac1694b86fbc144
+      internalID: -92663237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_8
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1191
+        width: 43
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbdfe5cfe8c987359fd8f33df1ceb29
+      internalID: 1017797668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1059
+        width: 53
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1243923da538051a72675abdba3a1c
+      internalID: 1116160055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1059
+        width: 73
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bf21947056d0308a102571aad837bc
+      internalID: 1222046345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_11
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1056
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba406651d5e7b2d719d61faf871b8bda
+      internalID: -969961881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_12
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1058
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bbed888e5e12ea89e8bcfd867d097b
+      internalID: -1437508448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1059
+        width: 61
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddbaeac9cf054b67b3f978e7825369d
+      internalID: -108927128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_14
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1056
+        width: 56
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70838f6465c40850a95e5422f7c7171e
+      internalID: -201302936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 923
+        width: 55
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6585ec6652a4b216fa81d4c6d9305b60
+      internalID: -952764851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_16
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 923
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7eda217edfce92592126d2f8555638
+      internalID: 2106657536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 924
+        width: 61
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9589a8efaa147c0bd9d1a0d8e58ea642
+      internalID: 439374008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_18
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 927
+        width: 73
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4f88e80be38c4018b25f9d9f00eaaa
+      internalID: -269727482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_19
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 924
+        width: 71
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f194365309136219e18e65db57b9c8
+      internalID: -1719830489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 925
+        width: 65
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f85307ae14c91d0ab9451b1831e47c4
+      internalID: -1664262021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_21
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 806
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ced01fe8ff7f233be381389427e886
+      internalID: 699113145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_22
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 841
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912d976f7d84ffb7db80459346923522
+      internalID: -2012279665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 846
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ed28a1a549abb90b276320bd36599b
+      internalID: 544620992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_24
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 846
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271bae5b1dbfdbaf487bdab419e84395
+      internalID: 86176654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_25
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 846
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5c5b9b072c3ccabb154fa823609477
+      internalID: 784228049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_26
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad774c060f9e6a2d69105fafc20f2b5c
+      internalID: -2026314544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_27
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 846
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e53b868fa5a78368b3ee2131264f436
+      internalID: -395755731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_28
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a364bcb6430042e59f0534ac7b225db
+      internalID: 1977549305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_29
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706e4e2ae2b9c50479d791c4326bc306
+      internalID: 1907255053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_30
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 846
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0bd65e592cc414eaefa36c425c2334
+      internalID: 1929986670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_31
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef705bc2745f2ce79e07fdf86fe9382
+      internalID: -395997102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_32
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 846
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc20ed0626644c6fb996603bcb293a45
+      internalID: -542852670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_33
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 846
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a2bf4c63398d0178e66109b483868d
+      internalID: -372650881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_34
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 846
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e4ad5c7b43f411f820e02352ecd3ba
+      internalID: -1659825372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_35
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 846
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7f08cb6768204d38afc569bc24553d
+      internalID: -1831020981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_36
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 763
+        width: 38
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36970d869337128ac9e0ad9d6fc40e0a
+      internalID: -2113459708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_37
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 763
+        width: 64
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2201b48082b08ebb178a1e4c61d834
+      internalID: 326236027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_38
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 763
+        width: 72
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b704987794ab832b0cf3a978edf21b
+      internalID: 1009630729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_39
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 763
+        width: 70
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12dc3b3ff5d721d9b1ad75b77a896a7
+      internalID: 552052251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_40
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 763
+        width: 59
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b0817a73abf7848aaa75017a0ab562
+      internalID: -1410152562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_41
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 824
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fdc714b4b7764f58f8ac953c24f62a
+      internalID: 1646836956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_42
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8878e4509491c3acca31587c508242f1
+      internalID: 1265115016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_43
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 824
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae972e62743bf442b15a0ba69020559
+      internalID: 1629506616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e00d7c05ae51a51a5a963aa457927b
+      internalID: -1319357789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_45
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e2dc0fe1d1f750db0f1dbe82b4ea71
+      internalID: -2110404218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_46
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 824
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6233b8e840851e37d9e15d71480e7427
+      internalID: -967347849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eff285a522badcd59872436937fc4e2
+      internalID: -1195356328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_48
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 824
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8338c918af1c59cbab335ec5c6f8ca
+      internalID: -70671945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_49
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 824
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b277c49217593c3bfad3f5bc415456c1
+      internalID: 1417328449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_50
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 821
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c9ad65b23ed19f2ab0d9bc06ab6edf
+      internalID: -1415950587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_51
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 824
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37ea5f77475849679389aa481504528
+      internalID: -1654147104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_52
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 824
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9617f9a2219e641069765f705bedba52
+      internalID: 40631196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_53
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057fe64f6be9652cdb8933e68bdb6151
+      internalID: -1103449969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_54
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c11469d638490e2b91092152d9bc2b
+      internalID: 1766462715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_55
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 824
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfd5fc2daebe38619761faff5fed341
+      internalID: 76482566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_56
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 824
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1297b697bd91eb05bebd5a76b1e1e18
+      internalID: 1876622386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_57
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 824
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d49cebad38a7eca28308db3e99bab5b
+      internalID: 1488581515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_58
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 821
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1ef3a75c8080be5b6c330146bf5207
+      internalID: -1401517845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_59
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 824
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cd095f1dca57e548fcdf0d460fc5f8
+      internalID: -982032817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_60
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 808
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e97b5cfb915bbf078c360133d531b95
+      internalID: 1071215906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_61
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 808
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bf20e738a40ebacbfb40ba2a81bcb7
+      internalID: 2009778256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_62
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 806
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fcba721768576bb8a9e01530e9ed361
+      internalID: -782915158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_63
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 808
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa20761d18cd24058802fa2e497a42b1
+      internalID: 773981079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_64
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 808
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8048fb2fa08ef54b9a73d6f275d2b411
+      internalID: -195615264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_65
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 808
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b47adf1bf0de845cb17c121db7c57a5
+      internalID: -1323017680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_66
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 805
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a756c69e844de4beb659854d993531b
+      internalID: 1687785188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_67
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 808
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b2ae51664ddfbc1875ec4c4d76f2cd
+      internalID: 890414818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_68
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 808
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31eead89a8741adb0a9716b0f1ea7dca
+      internalID: -2129674950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_69
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 808
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e76233eb11f814518822b45e53d4054
+      internalID: -230445448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_70
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 808
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971b97534ee0a76aa8cc9436e9d74b00
+      internalID: -1265043067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_71
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 808
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886feb8f55ac5ce8b9a65c3a0fbae300
+      internalID: 1468524906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_72
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 808
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c71b3f0913ec0fa195d51728eb9182d
+      internalID: -1885928415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_73
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 808
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b53d506a46f0dcb8b9d344f361dba9
+      internalID: 2123015360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_74
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 808
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6428250a3a54b3b48e6dfb1aaf83896
+      internalID: -1816414115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_75
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 784
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5cccd22bf28bc3fabe5ccc283de49b
+      internalID: 682021260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_76
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 787
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0834e2fc5c5cdf0b9051acee8c5cb32
+      internalID: 61802348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_77
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 784
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac2b40fd40b89d1da81d5bf4e374ca3
+      internalID: -890608980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_78
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 636
+        width: 69
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416534399e6818b44836e0852706c414
+      internalID: -1970889381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_79
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 637
+        width: 81
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd6638c89c07cf87ae4cf4aaf5e1968
+      internalID: 1667435676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_80
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 637
+        width: 88
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b01bdf6db75aa439f886c01550fd50
+      internalID: 1628150868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_81
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 634
+        width: 105
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57642407068f8511f8df00953be8804a
+      internalID: 219895577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_82
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 634
+        width: 96
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a50b16c2fe765012b312ee4b417f7ea
+      internalID: 721632574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_83
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 634
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f1750b67645531dacb07d416960d81
+      internalID: -2059776650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_84
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 637
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409d4701a8b4ba9a68f16f168f9e6faf
+      internalID: 1697103704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_85
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 636
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53bcfc455658ffb386612e665bf5d32
+      internalID: -1752167013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_86
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 492
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12fa1a84f75d27fca42b529a7278de1
+      internalID: -387293570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_87
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 492
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9ef034dc4800ed5a1a1359b1a57a84
+      internalID: 23483468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_88
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 492
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13089d47b84452ea3a2e706baf10204c
+      internalID: -79302973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_89
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 492
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349c26c785bd7e8fd9c2c71791ef5a5a
+      internalID: 327175887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_90
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 492
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3317efc08c2c190ab5f09997658f431
+      internalID: -375644370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_91
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 476
+        width: 70
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad216c4eeea565c0bb543721fae987d7
+      internalID: 1157491492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_92
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 461
+        width: 68
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8130cf9a3edb3c71db8711f961005262
+      internalID: 268500140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_93
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 469
+        width: 73
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903288f6eb7aea566afee617da4754f7
+      internalID: 1553975800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_94
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 474
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7208bf151fe487147ae89674b7a7dd31
+      internalID: 440119194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_95
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 474
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a3aae9d70e62d188d45361753e3cee
+      internalID: 147561041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_96
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 314
+        width: 54
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d24271298b6d7b03a83e97bc5ca6b64
+      internalID: 1821521864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 314
+        width: 89
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a821165fc8e00a51bb77db35cd5ea90a
+      internalID: 1712905845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_98
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 314
+        width: 93
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706429d5757f35849815be0fd8ef8278
+      internalID: -59519332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_99
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 314
+        width: 53
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1123548410d9b7f9eb6f0b5331abca5f
+      internalID: -2101319943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_100
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 314
+        width: 59
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bc8149a1fd8c7db96cf7565c49395f
+      internalID: 142067417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_101
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 314
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d96187ac3240263db716fdaa7b8aa4c
+      internalID: 258241794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_102
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 314
+        width: 38
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79df9c860136ccc5b8cda9149de7bf1d
+      internalID: 1272023997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_103
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 313
+        width: 35
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43409f6f81d2219c5bcc9fe55cc7ef45
+      internalID: -1401569120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_104
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 160
+        width: 76
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca081a6c709a323aa86032adf03f850
+      internalID: 448177377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_105
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 158
+        width: 59
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd42b6fad38f4394988b468602560141
+      internalID: 1773367012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_106
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 161
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abeeba2e2c710bc0da2495143c617f6d
+      internalID: -887450118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_107
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 165
+        width: 58
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ce49b6e28e617eb8291dc6c10def20
+      internalID: -923964664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_108
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 166
+        width: 56
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef402cec092d5ce9988466e79290cea8
+      internalID: -580674398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_109
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 168
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7907d456200634e9ac3a58aa0dc5124
+      internalID: -1164900001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_110
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 8
+        width: 61
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0a56ea512b60af88066c387a0975f6
+      internalID: -2078417607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_111
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 8
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5627bce3c7bee326975a939aaf3b904
+      internalID: -202614107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_112
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 8
+        width: 52
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5144b4510d9bd4348827822080b77db9
+      internalID: 57787657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_113
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 8
+        width: 86
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fe3f4dcff4e5afd8ed3abba4dfc8b9
+      internalID: -1612966312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_114
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 83
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706d840dd524168daacb79d7fb87d018
+      internalID: 1397947563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_115
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 80
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e73671c65a2c5c29122750349605fe
+      internalID: -1810099370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_116
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 80
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8122cc3e8c215f33599dd17a406ab6bc
+      internalID: -1605560859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_117
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 83
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39185394f29bdc2d291075b9a3fca9d0
+      internalID: 1192096088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_118
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 83
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ee648e5e63df75994f7847ce60fbfa
+      internalID: 1773439627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_119
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 83
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3d6507f1982aecea98cc58d977312d
+      internalID: 995513218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_120
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 80
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2970c141f7e9c2ecdaffc4f260acaa66
+      internalID: -1642340598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_121
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 30
+        width: 49
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d17e72908adb083bb9f0f07917fa304
+      internalID: 309718208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_122
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 62
+        width: 124
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ecba1266fc2174e99dad0b3627fc72
+      internalID: -1038507338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_123
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 65
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b2b685186b3d98c8e95afe135b5a3b
+      internalID: 857956509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_124
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 65
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d31792bebcd4e6a095647562f856ebf
+      internalID: 1694354131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_125
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 65
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5c5e1f876f46171a34cf7b42cb41e7
+      internalID: 1258523943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_126
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 65
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d0001ab28f187f1be4732af8339197
+      internalID: 119900536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_127
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 49
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc372d8dd588a6027ae06383527c3088
+      internalID: -423063545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_128
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 49
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af98403c7a9d857bd98b19f35aa6d39a
+      internalID: 1450469689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_129
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 49
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d619e45b0157f3692129d83c928bfc
+      internalID: -147828331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_130
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 49
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07da58a0d24e2ed95a359f08844810e8
+      internalID: -1314255004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_131
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 46
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d658c9ad4c018323a71fa96a5dfe0be
+      internalID: -90803111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_132
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 49
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0106b900a27e35b2cadf25a31933a26a
+      internalID: -395891177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_133
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 49
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac5a6d749e84b9c395b6a46d24b7e39
+      internalID: -169567078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_134
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 49
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985574cbbbcaae1d8b191b08fdb195e2
+      internalID: -827901015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_135
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 47
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088e438a9460f3c27aa6b002a9a0a66c
+      internalID: 595560048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_136
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 46
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a8519ca10dccd169fd9e66bc73140f
+      internalID: -832433428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_137
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 49
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f10659831475eeb802c66c2a8aa6f3
+      internalID: -1195014853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_138
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 49
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac536aab56996ef5ab94a95b0701e33
+      internalID: -904788073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_139
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 49
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fba7d38a9e2eb13bb6eebc48f96c577
+      internalID: 1270799548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_140
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 49
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eceae94cb1d0e9858174d23e8dc356a
+      internalID: -672386238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_141
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 49
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56090c8b0fbd227388cdbe6a62a4cee9
+      internalID: -527667529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_142
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 30
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622a3122fc00fc302a19a3bf9d94b770
+      internalID: 899736090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_143
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289d6c8bd2f7473c0a35eece5eaf6013
+      internalID: -2141712886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_144
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f328fb442bf6fda9d86814dd681574
+      internalID: -493750579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_145
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 33
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffb189e01dcedb4ca1734e379f7fe5f
+      internalID: -507257755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_146
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0157110a9ee7ca291279980b4ea070
+      internalID: 376979285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_147
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 30
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f904ebb825825ed866185d9273ef58
+      internalID: 531820081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_148
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3505cff3d21e7e892bf4a8645ff79b23
+      internalID: -1151740139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_149
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fca1fee75b358499296bc5d680905a
+      internalID: 1550761443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_150
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8735c9346de794fa5a6b1a4db911c4
+      internalID: 578669894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_151
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 33
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ee28b41b5e1f4fd9fbc70edf753702
+      internalID: 1166488185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_152
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d2fdc76739877039049f20ec33f88b
+      internalID: 2033305250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_153
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b473cbd39a0fc9ef1b8cba6392c9b77f
+      internalID: 1523027770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_154
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 33
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebe1ab278f41a232a1e12a5b54a0917
+      internalID: -1676785564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_39: 552052251
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_69: -230445448
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_147: 531820081
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_14: -201302936
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_85: -1752167013
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_53: -1103449969
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_96: 1821521864
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_70: -1265043067
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_110: -2078417607
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_6: -337278156
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_150: 578669894
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_144: -493750579
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_13: -108927128
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_84: 1697103704
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_47: -1195356328
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_123: 857956509
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_142: 899736090
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_5: -1064888942
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_43: 1629506616
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_137: -1195014853
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_75: 682021260
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_89: 327175887
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_57: 1488581515
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_67: 890414818
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_120: -1642340598
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_62: -782915158
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_29: 1907255053
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_104: 448177377
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_76: 61802348
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_143: -2141712886
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_118: 1773439627
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_27: -395755731
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_83: -2059776650
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_151: 1166488185
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_153: 1523027770
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_26: -2026314544
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_79: 1667435676
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_60: 1071215906
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_68: -2129674950
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_98: -59519332
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_112: 57787657
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_95: 147561041
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_145: -507257755
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_101: 258241794
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_125: 1258523943
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_40: -1410152562
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_10: 1222046345
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_54: 1766462715
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_148: -1151740139
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_23: 544620992
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_49: 1417328449
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_133: -169567078
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_35: -1831020981
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_134: -827901015
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_92: 268500140
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_12: -1437508448
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_21: 699113145
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_2: 1275572519
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_41: 1646836956
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_11: -969961881
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_34: -1659825372
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_152: 2033305250
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_55: 76482566
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_31: -395997102
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_129: -147828331
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_136: -832433428
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_132: -395891177
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_3: -276400040
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_58: -1401517845
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_15: -952764851
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_100: 142067417
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_19: -1719830489
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_81: 219895577
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_127: -423063545
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_36: -2113459708
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_99: -2101319943
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_146: 376979285
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_126: 119900536
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_37: 326236027
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_113: -1612966312
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_140: -672386238
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_30: 1929986670
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_33: -372650881
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_119: 995513218
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_59: -982032817
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_20: -1664262021
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_94: 440119194
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_130: -1314255004
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_28: 1977549305
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_73: 2123015360
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_66: 1687785188
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_74: -1816414115
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_51: -1654147104
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_135: 595560048
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_108: -580674398
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_90: -375644370
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_116: -1605560859
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_7: -92663237
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_24: 86176654
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_50: -1415950587
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_105: 1773367012
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_71: 1468524906
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_0: -474224117
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_103: -1401569120
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_87: 23483468
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_82: 721632574
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_97: 1712905845
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_115: -1810099370
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_72: -1885928415
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_45: -2110404218
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_107: -923964664
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_8: 1017797668
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_128: 1450469689
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_64: -195615264
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_78: -1970889381
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_9: 1116160055
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_86: -387293570
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_80: 1628150868
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_131: -90803111
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_18: -269727482
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_4: 1936875321
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_117: 1192096088
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_149: 1550761443
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_25: 784228049
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_138: -904788073
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_48: -70671945
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_121: 309718208
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_1: -544604062
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_44: -1319357789
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_122: -1038507338
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_22: -2012279665
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_65: -1323017680
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_42: 1265115016
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_77: -890608980
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_38: 1009630729
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_109: -1164900001
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_106: -887450118
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_32: -542852670
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_91: 1157491492
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_124: 1694354131
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_56: 1876622386
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_16: 2106657536
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_61: 2009778256
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_93: 1553975800
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_111: -202614107
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_139: 1270799548
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_154: -1676785564
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_17: 439374008
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_114: 1397947563
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_52: 40631196
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_102: 1272023997
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_63: 773981079
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_88: -79302973
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_141: -527667529
+      favpng_heroes-of-might-and-magic-iii-playstation-sprite-super-nintendo-entertainment-system_46: -967347849
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

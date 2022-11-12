@@ -1,9 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class PlayerCharacter
-{
-    public bool Impostor{get;set;}
-    // todo
+namespace Models
+{    
+    [Serializable]
+    public struct PlayerCharacter
+    {
+        public bool Impostor{get; set;}
+        public string Name { get; set; }
+        public string Uid { get; }
+        
+    }
 }
