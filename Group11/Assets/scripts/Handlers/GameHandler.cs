@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Objects;
+using TMPro;
 using UnityEngine;
 
 public class GameHandler : MonoBehaviour
@@ -15,7 +16,7 @@ public class GameHandler : MonoBehaviour
     [SerializeField] private float _roundtime = 120f;
     private List<NodeObject> _tasks;
     private ProgressBar _pg;
-    
+    private TextMeshPro txp;
     public GameObject character;
     public static GameHandler Instance
     {
@@ -40,14 +41,16 @@ public class GameHandler : MonoBehaviour
 
     private void Update()
     {
-        this._roundtime -= Time.deltaTime;
+        _roundtime -= Time.deltaTime;
         _pg._current = this._roundtime;
 
     }
 
     public void Start()
     {
-        _pg = GetComponentsInChildren<ProgressBar>()[0];
+        // txp = GetComponentInChildren<TextMeshPro>();
+        // txp.text = "placeholder";
+        _pg = GetComponentInChildren<ProgressBar>();
         _pg._max = this._roundtime;
         
         _tasks = new List<NodeObject>(GetComponentsInChildren<NodeObject>());
