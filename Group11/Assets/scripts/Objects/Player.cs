@@ -40,11 +40,26 @@ namespace Objects
             {
                 if (Vector2.Distance(o.transform.position, transform.position) < _interactionDistance)
                 {
-                    Debug.Log("interacted with node");
+                    var node = o.GetComponent<NodeObject>();
+                    node.Complete();
+                    return;
                 }
             }
         }
 
+        void OnSabotage()
+        {
+            foreach (var o in _tasks)
+            {
+                if (Vector2.Distance(o.transform.position, transform.position) < _interactionDistance)
+                {
+                    var node = o.GetComponent<NodeObject>();
+                    node.Sabotarge();
+                    return;
+                    ;
+                }
+            }
+        }
 
         void FixedUpdate()
         {
