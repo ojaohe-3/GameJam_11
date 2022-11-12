@@ -21,19 +21,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1435776748477364798, guid: b94f5a408dbdf99f789a6244a4a3a719, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.286437
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1435776748477364798, guid: b94f5a408dbdf99f789a6244a4a3a719, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.8476899
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1435776748477364798, guid: b94f5a408dbdf99f789a6244a4a3a719, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.76
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1435776748477364798, guid: b94f5a408dbdf99f789a6244a4a3a719, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.57
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1435776748477364798, guid: b94f5a408dbdf99f789a6244a4a3a719, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f890177ccc74f90aed535d1f3ea8bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  _target: {x: 5, y: -5}
+  _speed: 200
+  _target: {x: 10, y: 10}
   _ch:
     impostor: 0
     name: 
