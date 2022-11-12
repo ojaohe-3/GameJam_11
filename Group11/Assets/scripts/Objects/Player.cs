@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Models;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
@@ -25,29 +26,47 @@ namespace Objects
         {
             _body = GetComponent<Rigidbody2D>();
             Assert.IsNotNull(_body);
+            NetworkManager.Start(null);
         }
 
         void OnInteract()
         {
             Debug.Log("interacted !");
         }
-        
+
 
         void FixedUpdate()
         {
-            bool success = MovePlayer(_moveInput);
-        
-            if(!success)
+            while (NetworkManager.Queue.Count > 0)
             {
-                // Try Left / Right
-                success = MovePlayer(new Vector2(_moveInput.x, 0));
- 
+                Vector2 move = parseMovement(NetworkManager.Queue.Dequeue());
+                Debug.Log("parsed movement " + move);
+                var success = MovePlayer(move);
                 if(!success)
                 {
-                    success = MovePlayer(new Vector2(0, _moveInput.y));
+                    // Try Left / Right
+                    success = MovePlayer(new Vector2(move.x, 0));
+
+                    if(!success)
+                    {
+                        success = MovePlayer(new Vector2(0, move.y));
+                    }
                 }
             }
+            NetworkManager.SendMove(_moveInput);
         }
+
+        private static Vector2 parseMovement(string s)
+        {
+            s = s.Replace(" ", "").Replace("(", "").Replace(")", "");
+            var split = s.Trim().Split(",");
+            if (split.Length < 2)
+                throw new Exception("couldn't parse movement in " + s);
+            var x = float.Parse(split[0]);
+            var y = float.Parse(split[1]);
+            return new Vector2(x, y);
+        }
+
         // Tries to move the player in a direction by casting in that direction by the amount
         // moved plus an offset. If no collisions are found, it moves the players
         // Returns true or false depending on if a move was executed
@@ -59,11 +78,11 @@ namespace Objects
                 movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
                 _castCollisions, // List of collisions to store the found collisions into after the Cast is finished
                 _speed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
- 
+
             if (count == 0)
             {
                 Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
- 
+
                 // No collisions
                 _body.MovePosition(_body.position + moveVector);
                 return true;
@@ -75,7 +94,7 @@ namespace Objects
                 {
                     print(hit.ToString());
                 }
- 
+
                 return false;
             }
         }
