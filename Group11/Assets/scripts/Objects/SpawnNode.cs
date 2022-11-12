@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using UnityEngine;
 
-public class Circle : MonoBehaviour
+public class SpawnNode : MonoBehaviour
 {
 	private TcpClient socketConnection;
 	private Thread clientReceiveThread;
