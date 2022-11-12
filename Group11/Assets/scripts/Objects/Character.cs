@@ -22,7 +22,6 @@ namespace Objects
             Assert.IsNotNull(_body);
             // Assert.IsNotNull(_animator);
             // _target = _body.position;
-            Debug.Log("hello from " + name);
         }
 
         protected void FixedUpdate()

@@ -54,7 +54,6 @@ public class GameHandler : MonoBehaviour
                 MovementQueues.Add(target, queue);
             }
         }
-
         queue.Enqueue(v);
     }
 
@@ -82,8 +81,8 @@ public class GameHandler : MonoBehaviour
         if (!name.Equals(playerName) && !_players.ContainsKey(name))
         {
             Debug.Log("create character " + name);
-            Instantiate(character, Vector2.zero, Quaternion.identity);
-            var c = character.GetComponent<Character>();
+            var o = Instantiate(character, Vector2.zero, Quaternion.identity);
+            var c = o.GetComponent<Character>();
             c.Name = name;
             _players.Add(name, c);
         }
