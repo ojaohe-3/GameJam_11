@@ -9,29 +9,15 @@ using UnityEngine;
 public class GameHandler : MonoBehaviour
 {
     private static GameHandler _instance;
-    private static readonly object padlock = new();
 
     private static readonly Vector2 DefaultSpawnPoint = new(-2, 1);
     [SerializeField] private float _roundtime = 120f;
     private List<NodeObject> _tasks;
     private ProgressBar _pg;
-    
+
     public GameObject character;
-    public static GameHandler Instance
-    {
-        get
-        {
-            lock (padlock)
-            {
-                if (_instance == null)
-                {
-                    var o = new GameObject();
-                    _instance = o.AddComponent<GameHandler>();
-                }
-                return _instance;
-            }
-        }
-    }
+
+    public static GameHandler Instance => _instance;
 
     public static readonly string PlayerName = GetCommandArgs("player", "player");
     private readonly Dictionary<string, Character> _players = new();
@@ -49,7 +35,7 @@ public class GameHandler : MonoBehaviour
     {
         _pg = GetComponentsInChildren<ProgressBar>()[0];
         _pg._max = this._roundtime;
-        
+
         _tasks = new List<NodeObject>(GetComponentsInChildren<NodeObject>());
         _instance = this;
         var host = GetCommandArgs("host", null);
