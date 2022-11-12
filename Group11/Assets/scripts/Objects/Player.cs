@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Models;
-using Unity.VisualScripting;
-using Newtonsoft.Json;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
@@ -48,7 +45,7 @@ namespace Objects
 
         void FixedUpdate()
         {
-            var queue = GameHandler.MovementQueues.GetValueOrDefault("player", null);
+            var queue = GameHandler.MovementQueues.GetValueOrDefault(GameHandler.PlayerName, null);
             while (queue is { Count: > 0 })
             {
                 Vector2 move;
