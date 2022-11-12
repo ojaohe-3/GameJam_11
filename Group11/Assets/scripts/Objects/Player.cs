@@ -32,7 +32,6 @@ namespace Objects
             _body = GetComponent<Rigidbody2D>();
             // _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
-            GameHandler.Start();
         }
 
         void OnInteract()
@@ -72,7 +71,7 @@ namespace Objects
 
             if (_moveInput != Vector2.zero)
             {
-                GameHandler.NotifyMove(_moveInput);
+                GameHandler.Instance.NotifyMove(_moveInput);
             }
             else
             {

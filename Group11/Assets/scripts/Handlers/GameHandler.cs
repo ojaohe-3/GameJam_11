@@ -5,22 +5,42 @@ using Newtonsoft.Json;
 using Objects;
 using UnityEngine;
 
-public class GameHandler
+public class GameHandler : MonoBehaviour
 {
-    private static GameHandler instance;
+    private static GameHandler _instance;
     private static readonly object padlock = new();
-    public static string playerName = "player";
-    private static List<Character> players = new();
+    [SerializeField] private GameObject character;
+    public static GameHandler Instance
+    {
+        get
+        {
+            lock (padlock)
+            {
+                if (_instance == null)
+                {
+                    _instance = new ();
+                }
+                return _instance;
+            }
+        }
+    }
+    
+    public string playerName = "player";
+    private List<Character> players = new();
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
-    public static void Start()
+    public void Start()
     {
 
 
         NetworkManager.Start(null);
         NetworkManager.SendPlayerInfo(playerName);
-    }
+        Instantiate(character, Vector2.zero, Quaternion.identity);
+        
+        var c = character.GetComponent<Character>();
+        c?.OnSetTarget(new Vector2(10, 10));
+    }   
 
     public static void EnqueueMovement(Dictionary<string, string> message)
     {
@@ -42,22 +62,9 @@ public class GameHandler
         queue.Enqueue(v);
     }
 
-    public static GameHandler Instance
-    {
-        get
-        {
-            lock (padlock)
-            {
-                if (instance == null)
-                {
-                    instance = new GameHandler();
-                }
-                return instance;
-            }
-        }
-    }
 
-    public static void HandleMessage(string message)
+
+    public void HandleMessage(string message)
     {
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
         switch (dict.GetValueOrDefault("type", ""))
@@ -75,7 +82,7 @@ public class GameHandler
         }
     }
 
-    private static void RegisterPlayer(Dictionary<string,string>? message)
+    private void RegisterPlayer(Dictionary<string,string>? message)
     {
         var name = message.GetValueOrDefault("name", "");
         if (!name.Equals(playerName))
@@ -84,7 +91,7 @@ public class GameHandler
         }
     }
 
-    public static void NotifyMove(Vector2 moveInput)
+    public void NotifyMove(Vector2 moveInput)
     {
         NetworkManager.SendMove(playerName, moveInput);
     }
