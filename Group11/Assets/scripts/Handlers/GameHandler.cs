@@ -51,7 +51,6 @@ public class GameHandler
         }
     }
 
-
     public static void HandleMessage(string message)
     {
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
