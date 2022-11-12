@@ -56,7 +56,7 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player name: " + PlayerName);
         Debug.Log("Host name: " + host);
         NetworkManager.Start(host);
-        NetworkManager.SendPlayerInfo(PlayerName);
+        InvokeRepeating("SendPlayerInfo", 0f, 1f);
     }
 
     private static string GetCommandArgs(string name, string defaultValue)
@@ -91,13 +91,13 @@ public class GameHandler : MonoBehaviour
         queue.Enqueue(v);
     }
 
-    public void HandleMessage(string message)
+    public void HandleMessage(string message, GameClient source)
     {
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
         switch (dict.GetValueOrDefault("type", ""))
         {
             case "playerInfo":
-                RegisterPlayer(dict);
+                RegisterCharacter(dict.GetValueOrDefault("name", null), source);
                 break;
             case "move":
                 Debug.Log("Movement message: " + message);
@@ -109,15 +109,21 @@ public class GameHandler : MonoBehaviour
         }
     }
 
-    private void RegisterPlayer(Dictionary<string,string>? message)
+    private void RegisterCharacter(string name, GameClient source)
     {
-        var name = message.GetValueOrDefault("name", "");
-        if (!name.Equals(PlayerName) && !_players.ContainsKey(name))
+        if (name != null && !name.Equals(PlayerName) && !_players.ContainsKey(name))
         {
             Debug.Log("create character " + name);
             var o = Instantiate(character, DefaultSpawnPoint, Quaternion.identity);
             var c = o.GetComponent<Character>();
             c.Name = name;
+            foreach (var p in _players.Values)
+            {
+                Dictionary<string, string> msg = new();
+                msg.Add("type", "playerInfo");
+                msg.Add("name", p.name);
+                source.Send(JsonConvert.SerializeObject(msg));
+            }
             _players.Add(name, c);
         }
     }
@@ -125,5 +131,13 @@ public class GameHandler : MonoBehaviour
     public void NotifyMove(Vector2 moveInput)
     {
         NetworkManager.SendMove(PlayerName, moveInput);
+    }
+
+    private void SendPlayerInfo()
+    {
+        Dictionary<string, string> message = new();
+        message.Add("type", "playerInfo");
+        message.Add("name", PlayerName);
+        NetworkManager.Send(message);
     }
 }

@@ -54,7 +54,7 @@ public class GameClient
             if (message != null)
             {
                 Debug.Log("Client got message from server: " + message);
-                GameHandler.Instance.HandleMessage(message);
+                GameHandler.Instance.HandleMessage(message, this);
             }
             else
                 break;
