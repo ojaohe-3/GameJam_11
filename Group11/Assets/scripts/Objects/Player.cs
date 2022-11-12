@@ -82,7 +82,7 @@ namespace Objects
 
             // Send to Server movement if movement
             if (!move.Equals(Vector2.zero))
-                GameHandler.NotifyMove(move);
+                GameHandler.Instance.NotifyMove(move);
         }
 
         // Tries to move the player in a direction by casting in that direction by the amount
