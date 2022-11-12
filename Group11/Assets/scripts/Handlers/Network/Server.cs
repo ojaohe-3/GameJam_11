@@ -42,12 +42,10 @@ public class GameServer
         }
     }
 
-    public void Process(string request)
+    public void Process(string message)
     {
         foreach (var client in clients)
-        {
-            client.Send(request);
-        }
+            client.Send(message);
     }
 
     public void Disconnect(ServerClientHandler serverClientHandler)

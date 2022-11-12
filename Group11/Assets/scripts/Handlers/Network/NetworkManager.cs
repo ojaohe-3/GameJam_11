@@ -51,6 +51,19 @@ public class NetworkManager
         message.Add("target", target);
         message.Add("x", moveInput.x.ToString());
         message.Add("y", moveInput.y.ToString());
+        Send(message);
+    }
+
+    private static void Send(Dictionary<string, string> message)
+    {
         _client?.Send(JsonConvert.SerializeObject(message));
+    }
+
+    public static void SendPlayerInfo(string name)
+    {
+        Dictionary<string, string> message = new();
+        message.Add("type", "playerInfo");
+        message.Add("name", name);
+        Send(message);
     }
 }

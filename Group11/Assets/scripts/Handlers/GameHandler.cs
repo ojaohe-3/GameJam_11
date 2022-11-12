@@ -9,6 +9,8 @@ public class GameHandler
 {
     private static GameHandler instance;
     private static readonly object padlock = new();
+    public static string playerName = "player";
+    private static List<Character> players = new();
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
@@ -17,6 +19,7 @@ public class GameHandler
 
 
         NetworkManager.Start(null);
+        NetworkManager.SendPlayerInfo(playerName);
     }
 
     public static void EnqueueMovement(Dictionary<string, string> message)
@@ -59,6 +62,9 @@ public class GameHandler
         var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(message);
         switch (dict.GetValueOrDefault("type", ""))
         {
+            case "playerInfo":
+                RegisterPlayer(dict);
+                break;
             case "move":
                 Debug.Log("Movement message: " + message);
                 EnqueueMovement(dict);
@@ -69,8 +75,17 @@ public class GameHandler
         }
     }
 
+    private static void RegisterPlayer(Dictionary<string,string>? message)
+    {
+        var name = message.GetValueOrDefault("name", "");
+        if (!name.Equals(playerName))
+        {
+            players.Add(new Character(name));
+        }
+    }
+
     public static void NotifyMove(Vector2 moveInput)
     {
-        NetworkManager.SendMove("player", moveInput);
+        NetworkManager.SendMove(playerName, moveInput);
     }
 }

@@ -14,6 +14,14 @@ namespace Objects
         //private Animator _animator;
         [SerializeField]
         private PlayerCharacter _ch;
+
+        private readonly string _name;
+
+        public Character(string name)
+        {
+            _name = name;
+        }
+
         private void Start()
         {
             _body = GetComponent<Rigidbody2D>();
@@ -28,7 +36,7 @@ namespace Objects
 
             if (Vector2.Distance(_target, _body.position) > 0.1f)
             {
-                
+
                 var direction = (_target - _body.position).normalized;
                 _body.velocity = direction * (_speed * Time.deltaTime);
                 //_animator.SetBool("isMoving",true);
@@ -43,9 +51,9 @@ namespace Objects
 
         public void OnSetTarget(Vector2 target)
         {
-            
+
             this._target = target;
         }
-        
+
     }
 }
