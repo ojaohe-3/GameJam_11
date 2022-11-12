@@ -15,11 +15,11 @@ namespace Objects
         [SerializeField]
         private PlayerCharacter _ch;
 
-        private readonly string _name;
+        public string Name;
 
         public Character(string name)
         {
-            _name = name;
+            Name = name;
         }
 
         private void Start()

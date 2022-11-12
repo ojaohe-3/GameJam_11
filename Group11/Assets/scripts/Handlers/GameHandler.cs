@@ -24,9 +24,9 @@ public class GameHandler : MonoBehaviour
             }
         }
     }
-    
+
     public string playerName = "player";
-    private List<Character> players = new();
+    [SerializeField] private List<Character> players = new();
 
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
@@ -36,11 +36,7 @@ public class GameHandler : MonoBehaviour
 
         NetworkManager.Start(null);
         NetworkManager.SendPlayerInfo(playerName);
-        Instantiate(character, Vector2.zero, Quaternion.identity);
-        
-        var c = character.GetComponent<Character>();
-        c?.OnSetTarget(new Vector2(10, 10));
-    }   
+    }
 
     public static void EnqueueMovement(Dictionary<string, string> message)
     {
@@ -87,7 +83,12 @@ public class GameHandler : MonoBehaviour
         var name = message.GetValueOrDefault("name", "");
         if (!name.Equals(playerName))
         {
-            players.Add(new Character(name));
+            Instantiate(character, Vector2.zero, Quaternion.identity);
+
+            var c = character.GetComponent<Character>();
+            c.Name = name;
+            c?.OnSetTarget(new Vector2(10, 10));
+            players.Add(c);
         }
     }
 

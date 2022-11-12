@@ -52,26 +52,14 @@ namespace Objects
             while (queue is { Count: > 0 })
             {
                 Vector2 move;
-                if (!queue.TryDequeue(out move))
-                    continue;
-                // Try to move player in input direction, followed by left right and up down input if failed
-                var success = MovePlayer(move);
-                if (!success)
-                {
-                    // Try Left / Right
-                    success = MovePlayer(new Vector2(move.x, 0));
-                    if (!success)
-                    {
-                        success = MovePlayer(new Vector2(0, move.y));
-                    }
-                }
-
-                // _animator.SetBool("isMoving", success);
+                if (queue.TryDequeue(out move))
+                    MovePlayer(move);
             }
 
             if (_moveInput != Vector2.zero)
             {
-                GameHandler.Instance.NotifyMove(_moveInput);
+                // _animator.SetBool("isMoving", success);
+                AttemptMove(_moveInput);
             }
             else
             {
@@ -79,37 +67,41 @@ namespace Objects
             }
         }
 
+        void AttemptMove(Vector2 move)
+        {
+            // Try to move player in input direction, followed by left right and up down input if failed
+            if (DetectCollision(move) > 0)
+            {
+                if (DetectCollision(new Vector2(move.x, 0)) == 0)
+                    move = new Vector2(move.x, 0);
+                else if (DetectCollision(new Vector2(0, move.y)) == 0)
+                    move = new Vector2(0, move.y);
+                else
+                    move = Vector2.zero;
+            }
+
+            // Send to Server movement if movement
+            if (!move.Equals(Vector2.zero))
+                GameHandler.Instance.NotifyMove(move);
+        }
+
         // Tries to move the player in a direction by casting in that direction by the amount
         // moved plus an offset. If no collisions are found, it moves the players
         // Returns true or false depending on if a move was executed
-        public bool MovePlayer(Vector2 direction)
+        public void MovePlayer(Vector2 direction)
         {
-            // Check for potential collisions
-            int count = _body.Cast(
+            Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
+            _body.MovePosition(_body.position + moveVector);
+        }
+
+        private int DetectCollision(Vector2 direction)
+        {
+            return _body.Cast(
                 direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
                 movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
                 _castCollisions, // List of collisions to store the found collisions into after the Cast is finished
                 _speed * Time.fixedDeltaTime +
-                collisionOffset); // The amount to cast equal to the movement plus an offset
-
-            if (count == 0)
-            {
-                Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
-
-                // No collisions
-                _body.MovePosition(_body.position + moveVector);
-                return true;
-            }
-            else
-            {
-                // Print collisions
-                // foreach (RaycastHit2D hit in _castCollisions)
-                // {
-                //     print(hit.ToString());
-                // }
-
-                return false;
-            }
+                collisionOffset);
         }
 
         public void OnMove(InputValue inputValue)
