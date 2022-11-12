@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Objects;
 using UnityEngine;
 
 public class GameHandler
@@ -13,6 +14,8 @@ public class GameHandler
 
     public static void Start()
     {
+        var player = GameObject.FindGameObjectWithTag("Player")?.GetComponent<Character>();
+        player.OnSetTarget();
         NetworkManager.Start(null);
     }
 
