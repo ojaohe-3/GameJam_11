@@ -29,6 +29,7 @@ namespace Objects
             _body = GetComponent<Rigidbody2D>();
             // _animator = GetComponent<Animator>();
             Assert.IsNotNull(_body);
+            GameHandler.Player = this;
         }
 
         void OnInteract()
@@ -47,7 +48,7 @@ namespace Objects
         void OnSabotage()
         {
             if(_ch.impostor != true) return;
-            
+
             foreach (var o in _tasks)
             {
                 if (Vector2.Distance(o.transform.position, transform.position) < _interactionDistance)
@@ -62,18 +63,16 @@ namespace Objects
 
         void FixedUpdate()
         {
-            var queue = GameHandler.MovementQueues.GetValueOrDefault(GameHandler.PlayerName, null);
-            while (queue is { Count: > 0 })
-            {
-                Vector2 move;
-                if (queue.TryDequeue(out move))
-                    MovePlayer(move);
-            }
-
             if (_moveInput != Vector2.zero)
             {
                 // _animator.SetBool("isMoving", success);
-                AttemptMove(_moveInput);
+                var move = AttemptMove(_moveInput);
+                // Send to Server movement if movement
+                if (!move.Equals(Vector2.zero))
+                {
+                    var newPos = Move(move);
+                    GameHandler.Instance.NotifyPos(newPos);
+                }
             }
             else
             {
@@ -81,9 +80,10 @@ namespace Objects
             }
         }
 
-        void AttemptMove(Vector2 move)
+        // Try to move player in input direction, followed by left right and up down input if failed.
+        // Returns null vector if move failed.
+        Vector2 AttemptMove(Vector2 move)
         {
-            // Try to move player in input direction, followed by left right and up down input if failed
             if (DetectCollision(move) > 0)
             {
                 if (DetectCollision(new Vector2(move.x, 0)) == 0)
@@ -94,18 +94,16 @@ namespace Objects
                     move = Vector2.zero;
             }
 
-            // Send to Server movement if movement
-            if (!move.Equals(Vector2.zero))
-                GameHandler.Instance.NotifyMove(move);
+            return move;
         }
 
-        // Tries to move the player in a direction by casting in that direction by the amount
-        // moved plus an offset. If no collisions are found, it moves the players
-        // Returns true or false depending on if a move was executed
-        public void MovePlayer(Vector2 direction)
+        // Move the player in a direction and returns the new position
+        public Vector2 Move(Vector2 direction)
         {
             Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
-            _body.MovePosition(_body.position + moveVector);
+            var newPos = _body.position + moveVector;
+            _body.MovePosition(newPos);
+            return newPos;
         }
 
         private int DetectCollision(Vector2 direction)
@@ -126,6 +124,11 @@ namespace Objects
         public void OnFire()
         {
             print("Shots fired");
+        }
+
+        public Vector2 GetPos()
+        {
+            return _body.position;
         }
     }
 }

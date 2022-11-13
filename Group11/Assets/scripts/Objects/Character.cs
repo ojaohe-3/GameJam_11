@@ -24,21 +24,9 @@ namespace Objects
             // _target = _body.position;
         }
 
-        protected void FixedUpdate()
+        public void Move(Vector2 newPos)
         {
-            var queue = GameHandler.MovementQueues.GetValueOrDefault(Name, null);
-            while (queue is { Count: > 0 })
-            {
-                Vector2 move;
-                if (queue.TryDequeue(out move))
-                    Move(move);
-            }
-        }
-
-        public void Move(Vector2 direction)
-        {
-            Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
-            _body.MovePosition(_body.position + moveVector);
+            _body.MovePosition(newPos);
         }
     }
 }

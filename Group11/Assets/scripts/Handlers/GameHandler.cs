@@ -21,14 +21,14 @@ public class GameHandler : MonoBehaviour
 
     public int MaxScore {get; set;}
     public GameObject character;
-    
+    public static Player Player;
+
     private readonly Dictionary<string, Character> _players = new();
-    
+
 
     public static GameHandler Instance => _instance;
 
     public static readonly string PlayerName = GetCommandArgs("player", "player");
-    public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
 
 
     public GameObject GetClosestTask(Vector2 origin)
@@ -62,7 +62,8 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player name: " + PlayerName);
         Debug.Log("Host name: " + host);
         NetworkManager.Start(host);
-        InvokeRepeating("SendPlayerInfo", 0f, 1f);
+        InvokeRepeating("SendPlayerInfo", 1f, 1f);
+        InvokeRepeating("SendPlayerPos", 1f, 1f);
     }
 
     private static string GetCommandArgs(string name, string defaultValue)
@@ -78,23 +79,18 @@ public class GameHandler : MonoBehaviour
         return defaultValue;
     }
 
-    public static void EnqueueMovement(Dictionary<string, string> message)
+    public void EnqueueMovement(Dictionary<string, string> message)
     {
         var target = message.GetValueOrDefault("target", "");
         var x = float.Parse(message.GetValueOrDefault("x", "0"));
         var y = float.Parse(message.GetValueOrDefault("y", "0"));
         var v = new Vector2(x, y);
 
-        ConcurrentQueue<Vector2> queue;
-        lock (MovementQueues)
+        Character character;
+        if (_players.TryGetValue(target, out character))
         {
-            if (!MovementQueues.TryGetValue(target, out queue))
-            {
-                queue = new();
-                MovementQueues.Add(target, queue);
-            }
+            character.Move(v);
         }
-        queue.Enqueue(v);
     }
 
     public void HandleMessage(string message, GameClient source)
@@ -123,27 +119,29 @@ public class GameHandler : MonoBehaviour
             var o = Instantiate(character, DefaultSpawnPoint, Quaternion.identity);
             var c = o.GetComponent<Character>();
             c.Name = name;
-            foreach (var p in _players.Values)
-            {
-                Dictionary<string, string> msg = new();
-                msg.Add("type", "playerInfo");
-                msg.Add("name", p.name);
-                source.Send(JsonConvert.SerializeObject(msg));
-            }
             _players.Add(name, c);
+            SendPlayerInfo();
+            SendPlayerPos();
         }
     }
 
-    public void NotifyMove(Vector2 moveInput)
+    public void NotifyPos(Vector2 pos)
     {
-        NetworkManager.SendMove(PlayerName, moveInput);
+        NetworkManager.SendMove(PlayerName, pos);
     }
 
     private void SendPlayerInfo()
     {
+        Debug.Log("peekaboo 2");
         Dictionary<string, string> message = new();
         message.Add("type", "playerInfo");
         message.Add("name", PlayerName);
         NetworkManager.Send(message);
+    }
+
+    private void SendPlayerPos()
+    {
+        Debug.Log("peekaboo 1");
+        NotifyPos(Player.GetPos());
     }
 }
