@@ -28,7 +28,8 @@ public class GameHandler : MonoBehaviour
 
     public static GameHandler Instance => _instance;
 
-    public static readonly string PlayerName = GetCommandArgs("player", "player");
+    public static string PlayerName;
+    public static string Host;
 
 
     public GameObject GetClosestTask(Vector2 origin)
@@ -46,6 +47,14 @@ public class GameHandler : MonoBehaviour
 
     }
 
+    private void initPlayerNameAndHost()
+    {
+        if (PlayerName == null)
+            PlayerName = GetCommandArgs("player", "player");
+        if (Host == null)
+            Host = GetCommandArgs("host", "");
+    }
+
     public void Start()
     {
         // txp = GetComponentInChildren<TextMeshPro>();
@@ -58,10 +67,10 @@ public class GameHandler : MonoBehaviour
         MaxScore = _tasks.Count;
         // attaching delegate to each node to the score
         _tasks.ForEach(n => n.StatusChange += delegate(bool b) { this.CurrentScore += b ? 1 : -1; });
-        var host = GetCommandArgs("host", null);
+        initPlayerNameAndHost();
         Debug.Log("Player name: " + PlayerName);
-        Debug.Log("Host name: " + host);
-        NetworkManager.Start(host);
+        Debug.Log("Host name: " + Host);
+        NetworkManager.Start(Host);
         InvokeRepeating("SendPlayerInfo", 1f, 1f);
         InvokeRepeating("SendPlayerPos", 1f, 1f);
     }
@@ -132,7 +141,6 @@ public class GameHandler : MonoBehaviour
 
     private void SendPlayerInfo()
     {
-        Debug.Log("peekaboo 2");
         Dictionary<string, string> message = new();
         message.Add("type", "playerInfo");
         message.Add("name", PlayerName);
@@ -141,7 +149,6 @@ public class GameHandler : MonoBehaviour
 
     private void SendPlayerPos()
     {
-        Debug.Log("peekaboo 1");
         NotifyPos(Player.GetPos());
     }
 }

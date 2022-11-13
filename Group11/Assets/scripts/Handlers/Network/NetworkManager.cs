@@ -18,7 +18,7 @@ public class NetworkManager
     public static void Start(string serverHost)
     {
         if (_client != null) return;
-        if (serverHost == null)
+        if (serverHost == null || serverHost.Equals(""))
         {
             serverHost = Dns.GetHostName();
             _server = new(serverHost, Port);
