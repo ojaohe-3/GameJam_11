@@ -21,14 +21,15 @@ public class GameHandler : MonoBehaviour
 
     public int MaxScore {get; set;}
     public GameObject character;
-    
+    public static Player Player;
+
     private readonly Dictionary<string, Character> _players = new();
-    
+
 
     public static GameHandler Instance => _instance;
 
-    public static readonly string PlayerName = GetCommandArgs("player", "player");
-    public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
+    public static string PlayerName;
+    public static string Host;
 
 
     public GameObject GetClosestTask(Vector2 origin)
@@ -46,6 +47,14 @@ public class GameHandler : MonoBehaviour
 
     }
 
+    private void initPlayerNameAndHost()
+    {
+        if (PlayerName == null)
+            PlayerName = GetCommandArgs("player", "player");
+        if (Host == null)
+            Host = GetCommandArgs("host", "");
+    }
+
     public void Start()
     {
         // txp = GetComponentInChildren<TextMeshPro>();
@@ -58,11 +67,12 @@ public class GameHandler : MonoBehaviour
         MaxScore = _tasks.Count;
         // attaching delegate to each node to the score
         _tasks.ForEach(n => n.StatusChange += delegate(bool b) { this.CurrentScore += b ? 1 : -1; });
-        var host = GetCommandArgs("host", null);
+        initPlayerNameAndHost();
         Debug.Log("Player name: " + PlayerName);
-        Debug.Log("Host name: " + host);
-        NetworkManager.Start(host);
-        InvokeRepeating("SendPlayerInfo", 0f, 1f);
+        Debug.Log("Host name: " + Host);
+        NetworkManager.Start(Host);
+        InvokeRepeating("SendPlayerInfo", 1f, 1f);
+        InvokeRepeating("SendPlayerPos", 1f, 1f);
     }
 
     private static string GetCommandArgs(string name, string defaultValue)
@@ -78,23 +88,18 @@ public class GameHandler : MonoBehaviour
         return defaultValue;
     }
 
-    public static void EnqueueMovement(Dictionary<string, string> message)
+    public void EnqueueMovement(Dictionary<string, string> message)
     {
         var target = message.GetValueOrDefault("target", "");
         var x = float.Parse(message.GetValueOrDefault("x", "0"));
         var y = float.Parse(message.GetValueOrDefault("y", "0"));
         var v = new Vector2(x, y);
 
-        ConcurrentQueue<Vector2> queue;
-        lock (MovementQueues)
+        Character character;
+        if (_players.TryGetValue(target, out character))
         {
-            if (!MovementQueues.TryGetValue(target, out queue))
-            {
-                queue = new();
-                MovementQueues.Add(target, queue);
-            }
+            character.Move(v);
         }
-        queue.Enqueue(v);
     }
 
     public void HandleMessage(string message, GameClient source)
@@ -123,20 +128,15 @@ public class GameHandler : MonoBehaviour
             var o = Instantiate(character, DefaultSpawnPoint, Quaternion.identity);
             var c = o.GetComponent<Character>();
             c.Name = name;
-            foreach (var p in _players.Values)
-            {
-                Dictionary<string, string> msg = new();
-                msg.Add("type", "playerInfo");
-                msg.Add("name", p.name);
-                source.Send(JsonConvert.SerializeObject(msg));
-            }
             _players.Add(name, c);
+            SendPlayerInfo();
+            SendPlayerPos();
         }
     }
 
-    public void NotifyMove(Vector2 moveInput)
+    public void NotifyPos(Vector2 pos)
     {
-        NetworkManager.SendMove(PlayerName, moveInput);
+        NetworkManager.SendMove(PlayerName, pos);
     }
 
     private void SendPlayerInfo()
@@ -145,5 +145,10 @@ public class GameHandler : MonoBehaviour
         message.Add("type", "playerInfo");
         message.Add("name", PlayerName);
         NetworkManager.Send(message);
+    }
+
+    private void SendPlayerPos()
+    {
+        NotifyPos(Player.GetPos());
     }
 }
