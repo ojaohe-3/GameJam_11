@@ -17,7 +17,7 @@ public class GameHandler : MonoBehaviour
     private ProgressBar _pg;
     private TextMeshPro txp;
     public GameObject character;
-
+    
     public static GameHandler Instance => _instance;
 
     public static readonly string PlayerName = GetCommandArgs("player", "player");
