@@ -14,9 +14,11 @@ public class GameHandler : MonoBehaviour
 
     private static readonly Vector2 DefaultSpawnPoint = new(-2, 1);
     [SerializeField] private float _roundtime = 120f;
+    private float _time_limit;
     [SerializeField] private GameObject _task_pref;
     private List<NodeObject> _tasks;
     private ProgressBar _pg;
+    private AudioSource _as;
     public int CurrentScore { get; set; }
 
     public int MaxScore {get; set;}
@@ -31,6 +33,10 @@ public class GameHandler : MonoBehaviour
     public static string PlayerName;
     public static string Host;
 
+    private void OnDestroy()
+    {
+        _as.Stop(); // Not safe yet
+    }
 
     public GameObject GetClosestTask(Vector2 origin)
     {
@@ -44,6 +50,16 @@ public class GameHandler : MonoBehaviour
     {
         _roundtime -= Time.deltaTime;
         _pg._current = this._roundtime;
+        if (_roundtime / _time_limit < 0.1f && !_as.isPlaying)
+        {
+            // _as.Play();
+            
+        }
+        else
+        {
+            _as.Stop();
+        }
+        
 
     }
 
@@ -57,8 +73,10 @@ public class GameHandler : MonoBehaviour
 
     public void Start()
     {
+        _time_limit = _roundtime;
         // txp = GetComponentInChildren<TextMeshPro>();
         // txp.text = "placeholder";
+        _as = GetComponent<AudioSource>();
         _pg = GetComponentInChildren<ProgressBar>();
         _pg._max = this._roundtime;
 

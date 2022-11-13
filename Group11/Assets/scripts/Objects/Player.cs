@@ -19,12 +19,15 @@ namespace Objects
         [SerializeField] private ContactFilter2D movementFilter;
         [SerializeField] private PlayerCharacter _ch;
 
+        private AudioSource _audioSource;
         private List<GameObject> _tasks;
         private Vector2 _moveInput;
         private List<RaycastHit2D> _castCollisions = new List<RaycastHit2D>();
 
         void Start()
         {
+            _audioSource = GetComponent<AudioSource>();
+
             _tasks = new List<GameObject>(GameObject.FindGameObjectsWithTag("TaskNode"));
             _body = GetComponent<Rigidbody2D>();
             // _animator = GetComponent<Animator>();
@@ -100,9 +103,15 @@ namespace Objects
         // Move the player in a direction and returns the new position
         public Vector2 Move(Vector2 direction)
         {
+            
             Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
             var newPos = _body.position + moveVector;
             _body.MovePosition(newPos);
+            if (_audioSource.isPlaying == false)
+            {
+                _audioSource.PlayScheduled(1f);
+            }
+
             return newPos;
         }
 
