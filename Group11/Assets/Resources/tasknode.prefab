@@ -98,6 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _node:
-    status: 1
+    status: 0
     active: 1
     taskType: Battery

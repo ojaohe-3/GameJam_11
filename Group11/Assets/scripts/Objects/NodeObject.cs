@@ -7,9 +7,9 @@ namespace Objects
     public class NodeObject : MonoBehaviour
     {
         public Action<bool> StatusChange { get; set; }
-        
+        private SpriteRenderer _sprite;
         [SerializeField] private TaskNode _node;
-
+        
         public bool isCompleteable()
         {
             return _node.active && !_node.status;
@@ -17,18 +17,27 @@ namespace Objects
 
         public void Complete()
         {
-            if(_node.active != true) return;
+            if(_node.active != true || _node.status) return;
             
+            _sprite.color = Color.green;
             _node.status = true;
             StatusChange?.Invoke(true);
         }
         public bool Sabotarge()
         {
-            if(_node.active != true) return false;
+            if(_node.active != true || _node.status == false) return false;
 
             _node.status = false;
               StatusChange?.Invoke(false);
+              _sprite.color = Color.red;
               return true;
+        }
+
+        private void Start()
+        {
+            _sprite = GetComponent<SpriteRenderer>();
+            _sprite.color = Color.red;
+
         }
     }
 }

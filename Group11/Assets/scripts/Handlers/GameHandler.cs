@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using Objects;
 using TMPro;
@@ -13,17 +14,30 @@ public class GameHandler : MonoBehaviour
 
     private static readonly Vector2 DefaultSpawnPoint = new(-2, 1);
     [SerializeField] private float _roundtime = 120f;
+    [SerializeField] private GameObject _task_pref;
     private List<NodeObject> _tasks;
     private ProgressBar _pg;
-    private TextMeshPro txp;
+    public int CurrentScore { get; set; }
+
+    public int MaxScore {get; set;}
     public GameObject character;
     
+    private readonly Dictionary<string, Character> _players = new();
+    
+
     public static GameHandler Instance => _instance;
 
     public static readonly string PlayerName = GetCommandArgs("player", "player");
-    private readonly Dictionary<string, Character> _players = new();
-
     public static readonly Dictionary<string, ConcurrentQueue<Vector2>> MovementQueues = new();
+
+
+    public GameObject GetClosestTask(Vector2 origin)
+    {
+        // Sort based on distance using Linq
+        this._tasks = _tasks.OrderByDescending(t => Vector2.Distance(t.transform.position, origin)).ToList();
+        return _tasks[0].gameObject;
+    }
+
 
     private void Update()
     {
@@ -41,6 +55,9 @@ public class GameHandler : MonoBehaviour
 
         _tasks = new List<NodeObject>(GetComponentsInChildren<NodeObject>());
         _instance = this;
+        MaxScore = _tasks.Count;
+        // attaching delegate to each node to the score
+        _tasks.ForEach(n => n.StatusChange += delegate(bool b) { this.CurrentScore += b ? 1 : -1; });
         var host = GetCommandArgs("host", null);
         Debug.Log("Player name: " + PlayerName);
         Debug.Log("Host name: " + host);
